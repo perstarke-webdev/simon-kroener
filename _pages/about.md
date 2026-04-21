@@ -32,7 +32,7 @@ classes:
         >
       </div>
       <div class="about-page__hero-caption">
-        <p>Mich interessiert, wie ein Auftritt gelesen wird: im ersten Eindruck, in der Markenwirkung und in der technischen Ruhe dahinter.</p>
+        <p>Mich interessiert, wie ein Auftritt gelesen wird: im ersten Eindruck, in der Markenwirkung und in der Qualität der Umsetzung dahinter.</p>
       </div>
     </aside>
   </div>
@@ -62,8 +62,10 @@ classes:
 
 <section class="section section--white">
   <div class="shell about-page__why">
-    <div class="section-heading section-heading--center">
+    <div class="section-heading about-page__why-heading">
+      <p class="section-label section-label--dark"><span class="status-dot" aria-hidden="true"></span>Arbeitsweise</p>
       <h2>Drei Dinge, auf die ich immer achte</h2>
+      <p class="section-lead">Nicht als Checkliste, sondern als Raster für jede Entscheidung: Klarheit, Charakter und Substanz müssen gleichzeitig tragen, sonst bleibt ein Auftritt austauschbar.</p>
     </div>
 
     <div class="about-page__why-grid about-page__why-grid--three">

@@ -18,7 +18,7 @@ classes:
     <div class="hero-section__copy portfolio-page__hero-copy portfolio-page__hero-copy--editorial">
       <p class="section-label section-label--hero"><span class="status-dot" aria-hidden="true"></span>Ausgewählte Projekte</p>
       <h1>Ausgewählte Arbeiten.</h1>
-      <p class="hero-section__subtitle">Unterschiedliche Branchen, unterschiedliche Kontexte, aber immer derselbe Anspruch an Gestaltung, Klarheit und Umsetzung.</p>
+      <p class="hero-section__subtitle">Eine Auswahl aus Projekten, in denen Gestaltung, Markenwirkung und Umsetzung konsequent zusammenspielen.</p>
       <div class="hero-section__actions portfolio-page__hero-actions">
         <a class="button button--secondary" href="mailto:{{ legal.simon.email }}?subject=Mehr%20Referenzen%20auf%20Anfrage">
           Mehr Referenzen auf Anfrage
@@ -31,7 +31,7 @@ classes:
       <div class="portfolio-page__hero-chip">Webdesign</div>
       <div class="portfolio-page__hero-chip">Branding</div>
       <div class="portfolio-page__hero-chip">Performance</div>
-      <p>Die Auswahl zeigt Arbeiten, bei denen Marke, Struktur und Frontend konsequent zusammenspielen.</p>
+      <p>Unterschiedliche Kontexte, derselbe Anspruch an Wirkung und Präzision.</p>
     </aside>
   </div>
 </section>

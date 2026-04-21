@@ -1,7 +1,7 @@
 ---
 title: "AGB"
 permalink: /agb/
-description: "Allgemeine Geschäftsbedingungen für Leistungen von Kröner Consulting."
+description: "Allgemeine Geschäftsbedingungen für Leistungen von Simon Kröner oder Kröner & Starke Web Development."
 classes:
   - legal-page
 ---
@@ -15,6 +15,13 @@ classes:
       <h1>AGB</h1>
       <p class="hero-section__subtitle">Allgemeine Geschäftsbedingungen für Angebote, Projekte und laufende Zusammenarbeit im Rahmen von {{ legal.contracting_business }}.</p>
     </div>
+
+    <aside class="legal-page__hero-aside">
+      <p class="legal-page__hero-kicker">Rückfragen</p>
+      <a href="mailto:{{ simon.email }}">{{ simon.email }}</a>
+      <a href="tel:{{ simon.phone | replace: ' ', '' }}">{{ simon.phone }}</a>
+      <p class="legal-page__hero-meta">Stand: {{ legal.last_updated }}</p>
+    </aside>
   </div>
 </section>
 
@@ -40,14 +47,14 @@ classes:
 
       <div class="legal-page__aside-card legal-page__aside-card--soft">
         <h3>Vertragspartner</h3>
-        <p>Vertragspartner und Rechnungssteller ist, sofern im Angebot nichts anderes geregelt ist, {{ simon.business_name }}.</p>
+        <p>Vertragspartner und Rechnungssteller ist die im Angebot ausgewiesene Partei, in der Regel {{ legal.contracting_business }}.</p>
       </div>
     </aside>
 
     <div class="legal-page__content">
       <section class="legal-section" id="geltungsbereich">
         <h2>Geltungsbereich</h2>
-        <p>Diese Allgemeinen Geschäftsbedingungen gelten für alle Angebote, Verträge, Lieferungen und sonstigen Leistungen zwischen {{ simon.business_name }}, {{ simon.name }}, {{ simon.address_line_1 }}, {{ simon.postal_city }}, {{ simon.country }} (nachfolgend Auftragnehmer), und dem Kunden (nachfolgend Auftraggeber), sofern im individuellen Angebot nichts Abweichendes geregelt ist.</p>
+        <p>Diese Allgemeinen Geschäftsbedingungen gelten für alle Angebote, Verträge, Lieferungen und sonstigen Leistungen zwischen der im Angebot ausgewiesenen Partei, in der Regel {{ legal.contracting_business }}, {{ simon.address_line_1 }}, {{ simon.postal_city }}, {{ simon.country }} (nachfolgend Auftragnehmer), und dem Kunden (nachfolgend Auftraggeber), sofern im individuellen Angebot nichts Abweichendes geregelt ist.</p>
       </section>
 
       <section class="legal-section" id="vertragsgegenstand">
@@ -98,7 +105,7 @@ classes:
 
       <section class="legal-section" id="schluss">
         <h2>Schlussbestimmungen</h2>
-        <p>Es gilt schweizerisches Recht unter Ausschluss kollisionsrechtlicher Bestimmungen. Gerichtsstand ist, soweit gesetzlich zulässig, der Sitz von {{ simon.business_name }}. Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
+        <p>Es gilt schweizerisches Recht unter Ausschluss kollisionsrechtlicher Bestimmungen. Gerichtsstand ist, soweit gesetzlich zulässig, der Sitz der im Angebot ausgewiesenen Partei. Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
         <p>Letzte Aktualisierung: {{ legal.last_updated }}</p>
       </section>
     </div>

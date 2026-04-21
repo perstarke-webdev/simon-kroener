@@ -15,6 +15,13 @@ classes:
       <h1>Impressum</h1>
       <p class="hero-section__subtitle">Anbieterkennzeichnung und rechtliche Hinweise für den Webauftritt von {{ simon.name }}.</p>
     </div>
+
+    <aside class="legal-page__hero-aside">
+      <p class="legal-page__hero-kicker">Rückfragen</p>
+      <a href="mailto:{{ simon.email }}">{{ simon.email }}</a>
+      <a href="tel:{{ simon.phone | replace: ' ', '' }}">{{ simon.phone }}</a>
+      <p class="legal-page__hero-meta">Stand: {{ legal.last_updated }}</p>
+    </aside>
   </div>
 </section>
 
@@ -59,7 +66,6 @@ classes:
         <div class="legal-inline-links">
           <a href="mailto:{{ simon.email }}">{{ simon.email }}</a>
           <a href="tel:{{ simon.phone | replace: ' ', '' }}">{{ simon.phone }}</a>
-          <a href="{{ simon.website }}" target="_blank" rel="noopener noreferrer">{{ simon.website | replace: 'https://', '' }}</a>
           <a href="{{ legal.site_url }}" target="_blank" rel="noopener noreferrer">{{ legal.site_url | replace: 'https://', '' }}</a>
         </div>
       </section>
@@ -67,7 +73,7 @@ classes:
       <section class="legal-section" id="verantwortung">
         <h2>Verantwortung</h2>
         <ul class="legal-meta-list">
-          <li><strong>{{ simon.name }}</strong> verantwortet diesen Webauftritt sowie vertriebliche, strategische und vertragliche Themen über {{ simon.business_name }}.</li>
+          <li><strong>{{ simon.name }}</strong> verantwortet diesen Webauftritt sowie vertriebliche, strategische und vertragliche Themen persönlich oder über {{ legal.contracting_business }} gemäss Angebot.</li>
         </ul>
       </section>
 

@@ -1,8 +1,7 @@
 hero:
   label: "Projekt anfragen"
   title: "Projekt anfragen"
-  subtitle: "Erzähl mir kurz, worum es geht."
-  support: "Ich melde mich persönlich bei dir und sage dir ehrlich, wie ich deinen Auftritt in Design, Struktur und Wirkung einschätze."
+  subtitle: "Schreib mir kurz, worum es geht. Ich melde mich persönlich mit einer ehrlichen ersten Einschätzung zurück."
 
 form:
   name_label: "Dein Name*"

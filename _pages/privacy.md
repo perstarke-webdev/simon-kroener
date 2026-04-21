@@ -15,6 +15,13 @@ classes:
       <h1>Datenschutz</h1>
       <p class="hero-section__subtitle">Diese Datenschutzerklärung informiert darüber, wie Personendaten im Zusammenhang mit {{ legal.site_url | replace: 'https://', '' }} bearbeitet werden.</p>
     </div>
+
+    <aside class="legal-page__hero-aside">
+      <p class="legal-page__hero-kicker">Rückfragen</p>
+      <a href="mailto:{{ simon.email }}">{{ simon.email }}</a>
+      <a href="tel:{{ simon.phone | replace: ' ', '' }}">{{ simon.phone }}</a>
+      <p class="legal-page__hero-meta">Stand: {{ legal.last_updated }}</p>
+    </aside>
   </div>
 </section>
 

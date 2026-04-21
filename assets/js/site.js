@@ -411,6 +411,7 @@
     galleries.forEach(function (gallery) {
       var steps = gallery.querySelectorAll("[data-gallery-step]");
       var previews = gallery.querySelectorAll("[data-gallery-preview]");
+      var previewFrame = gallery.querySelector(".project-gallery__preview-frame");
 
       if (!steps.length || !previews.length) {
         return;
@@ -433,20 +434,32 @@
       }
 
       function updateGallery() {
-        var viewportAnchor = window.innerHeight * 0.42;
+        var viewportAnchor = window.innerHeight * 0.4;
+        var galleryRect = gallery.getBoundingClientRect();
+        var previewRect = previewFrame
+          ? previewFrame.getBoundingClientRect()
+          : { bottom: window.innerHeight };
         var activeIndex = 0;
-        var minDistance = Infinity;
+        var lastIndex = steps.length - 1;
+
+        if (galleryRect.top > viewportAnchor) {
+          setActive(0);
+          ticking = false;
+          return;
+        }
 
         steps.forEach(function (step, index) {
           var rect = step.getBoundingClientRect();
-          var center = rect.top + rect.height / 2;
-          var distance = Math.abs(center - viewportAnchor);
-
-          if (distance < minDistance) {
-            minDistance = distance;
+          if (rect.top <= viewportAnchor) {
             activeIndex = index;
           }
         });
+
+        if (
+          galleryRect.bottom <= previewRect.bottom + window.innerHeight * 0.1
+        ) {
+          activeIndex = lastIndex;
+        }
 
         setActive(activeIndex);
         ticking = false;
@@ -469,7 +482,7 @@
 
   function initAboutWhyTilt() {
     var cards = document.querySelectorAll(
-      ".about-page__why-card, .services-page__system-panel, .services-page__system-pillars, .services-page__process-track .process-card"
+      ".about-page__why-card, .services-page__system-panel, .services-page__process-track .process-card"
     );
     var tiltIntensity = 7.8;
     var canHover =

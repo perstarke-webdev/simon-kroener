@@ -44,17 +44,19 @@ classes:
 
 <section class="section section--cream services-page__problem">
   <div class="shell section-grid services-page__problem-grid">
-    <div class="section-heading">
+    <div class="section-heading services-page__split-heading">
       <h2>Wo Auftritte an Kraft verlieren</h2>
+      <p class="section-lead">Viele Websites haben einzelne gute Elemente, aber kein klares Ganzes. Genau diese Bruchstellen machen einen Auftritt schwächer als er sein müsste.</p>
     </div>
 
     <article class="services-page__problem-card services-page__problem-card--list">
-      <p class="section-lead">Viele Websites haben einzelne gute Elemente, aber kein klares Ganzes.</p>
       <p class="section-kicker">Der Grund:</p>
-      <p>Der erste Eindruck ist zu beliebig.</p>
-      <p>Marke und Inhalt sprechen nicht dieselbe Sprache.</p>
-      <p>Performance und Struktur bleiben hinter der Gestaltung zurück.</p>
-      <p>Mobile und Desktop fühlen sich nicht gleich präzise an.</p>
+      <ul class="services-page__problem-list">
+        <li>Der erste Eindruck ist zu beliebig.</li>
+        <li>Marke und Inhalt sprechen nicht dieselbe Sprache.</li>
+        <li>Performance und Struktur bleiben hinter der Gestaltung zurück.</li>
+        <li>Mobile und Desktop fühlen sich nicht gleich präzise an.</li>
+      </ul>
       <p class="services-page__problem-result">Genau dort setze ich an: beim Gesamtbild.</p>
     </article>
   </div>
@@ -87,8 +89,9 @@ classes:
 
 <section class="section section--cream services-page__process">
   <div class="shell">
-    <div class="section-heading">
+    <div class="section-heading services-page__split-heading services-page__process-heading">
       <h2>So entsteht dein neuer Auftritt</h2>
+      <p class="section-lead">Der Ablauf ist bewusst klar strukturiert: erst Richtung, dann Gestaltung, dann technische Präzision. So greift jede Entscheidung sauber in die nächste.</p>
     </div>
 
     <div class="process-track services-page__process-track">
@@ -133,13 +136,13 @@ classes:
 
 <section class="section section--white services-page__outcomes">
   <div class="shell section-grid services-page__outcomes-grid">
-    <div class="section-heading">
+    <div class="section-heading services-page__split-heading">
       <h2>Was du am Ende bekommst</h2>
+      <p class="section-lead">Keinen Sammelplatz aus Einzelmaßnahmen, sondern einen Auftritt, der klar wirkt, belastbar gebaut ist und sich konsequent nach deiner Qualität anfühlt.</p>
     </div>
 
     <div class="services-page__outcomes-card">
-      <p class="section-lead">Keinen Sammelplatz aus Einzelmaßnahmen.</p>
-      <p>Sondern ein System, das:</p>
+      <p class="section-kicker">Das Ergebnis:</p>
       <ul class="check-list">
         <li>
           <span class="inline-icon inline-icon--check" aria-hidden="true">&#10003;</span>

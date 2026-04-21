@@ -15,7 +15,6 @@ classes:
       <p class="section-label section-label--hero"><span class="status-dot" aria-hidden="true"></span>{{ contact.hero.label }}</p>
       <h1>Lass uns sprechen.</h1>
       <p class="hero-section__subtitle">{{ contact.hero.subtitle }}</p>
-      <p class="hero-section__support">{{ contact.hero.support }}</p>
     </div>
 
     <aside class="contact-page__hero-card">
