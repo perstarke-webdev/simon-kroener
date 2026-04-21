@@ -1,0 +1,563 @@
+- slug: "elevate-duesseldorf"
+  featured: true
+  name: "ELEVATE Düsseldorf"
+  industry:
+    - "Sport & Fitness"
+  types:
+    - "Unternehmenswebsite"
+    - "Branding / Logo"
+  technologies:
+    - "Custom Code"
+    - "Custom CMS"
+  collaboration: "Kundenprojekt"
+  tags:
+    - "Sport & Fitness"
+    - "Rebranding"
+  summary: "Kompletter Rebrand, der Performance, Premium-Anspruch und Community in einen starken neuen Auftritt übersetzt."
+  result: "Kompletter Rebrand von CrossFit am Rhein zu ELEVATE Düsseldorf: Logo, Branding und Website"
+  website_url: "https://www.elevate-gym.de/"
+  cover: "/assets/images/projects/elevate-duesseldorf-1.webp"
+  cover_alt: "Neuer Marken- und Website-Auftritt von ELEVATE Düsseldorf"
+  width: 3386
+  height: 1930
+  gallery:
+    - src: "/assets/images/projects/elevate-duesseldorf-1.webp"
+      alt: "ELEVATE Düsseldorf neuer Website- und Markenauftritt"
+      caption: "Der neue Auftritt verbindet Performance, Premium-Anspruch und klare Nutzerführung in einer deutlich stärkeren Markenwelt."
+      width: 3386
+      height: 1930
+    - src: "/assets/images/projects/elevate-duesseldorf-2.webp"
+      alt: "ELEVATE Düsseldorf neues Logo"
+      caption: "Zum Rebrand gehörte nicht nur die Website, sondern auch das neue Logo als klare visuelle Basis für ELEVATE Düsseldorf."
+      width: 2129
+      height: 1690
+    - src: "/assets/images/projects/elevate-duesseldorf-3.webp"
+      alt: "Vorheriger Website-Auftritt vor dem Rebrand von ELEVATE Düsseldorf"
+      caption: "Vorher: Vor dem Rebrand wirkte der Auftritt weniger professionell, veraltet und transportierte den Anspruch an Qualität, Performance und Community noch nicht klar genug."
+      width: 3386
+      height: 2096
+
+- slug: "onward-recruiting"
+  featured: true
+  name: "Onward Recruiting"
+  industry:
+    - "Recruiting & HR"
+  types:
+    - "Unternehmenswebsite"
+    - "Branding / Logo"
+  technologies:
+    - "Webflow"
+  collaboration: "Kundenprojekt"
+  tags:
+    - "Recruiting & HR"
+    - "Rebranding"
+  summary: "Website, die Vertrauen aufbaut und Recruiting-Anfragen bringt."
+  result: "3× Wachstum bei Kunden, Partnern und Team nach Relaunch"
+  website_url: "https://www.onward-recruiting.de/"
+  cover: "/assets/images/projects/onward-recruiting-1.webp"
+  cover_alt: "Startseite von Onward Recruiting"
+  width: 3420
+  height: 1972
+  gallery:
+    - src: "/assets/images/projects/onward-recruiting-1.webp"
+      alt: "Onward Recruiting Homepage"
+      caption: "Ein klarer Hero mit starker Positionierung und einer deutlich priorisierten Anfrageführung."
+      width: 3420
+      height: 1972
+    - src: "/assets/images/projects/onward-recruiting-2.webp"
+      alt: "Onward Recruiting Website Detail"
+      caption: "Vertrauen entsteht hier über ruhige Struktur, echte Proof-Elemente und konsequente Informationshierarchie."
+      width: 3420
+      height: 1972
+    - src: "/assets/images/projects/onward-recruiting-3.webp"
+      alt: "Onward Recruiting weitere Ansicht"
+      caption: "Jede Fläche unterstützt dieselbe Botschaft: professionell, fokussiert, glaubwürdig."
+      width: 3420
+      height: 1972
+
+- slug: "cafe-rotkehlchen"
+  featured: true
+  name: "Café Rotkehlchen"
+  industry:
+    - "Gastro & Food"
+  types:
+    - "Unternehmenswebsite"
+    - "Shop"
+  technologies:
+    - "Custom Code"
+    - "Custom CMS"
+  collaboration: "Kundenprojekt"
+  tags:
+    - "Gastro & Food"
+    - "Shop"
+  summary: "Website, die Atmosphäre transportiert und Gäste anzieht."
+  result: "Über 100 Bestellungen in den ersten 2 Wochen nach Launch"
+  website_url: "https://caferotkehlchen.de/"
+  cover: "/assets/images/projects/cafe-rotkehlchen-1.webp"
+  cover_alt: "Café Rotkehlchen Website"
+  width: 3420
+  height: 1976
+  gallery:
+    - src: "/assets/images/projects/cafe-rotkehlchen-1.webp"
+      alt: "Café Rotkehlchen Startseite"
+      caption: "Die Website verbindet Markencharakter mit klarer Führung in Richtung Shop und Bestellung."
+      width: 3420
+      height: 1976
+    - src: "/assets/images/projects/cafe-rotkehlchen-2.webp"
+      alt: "Café Rotkehlchen Menü oder Shop Bereich"
+      caption: "Produktinszenierung, Navigation und Story greifen ineinander, damit aus Aufmerksamkeit echte Aktion wird."
+      width: 3420
+      height: 1976
+    - src: "/assets/images/projects/cafe-rotkehlchen-3.webp"
+      alt: "Café Rotkehlchen Detailansicht"
+      caption: "Wärme, Wiedererkennung und Conversion-Logik stehen hier nicht im Widerspruch, sondern verstärken sich."
+      width: 3420
+      height: 1976
+
+- slug: "struve-international-recruiting"
+  featured: true
+  name: "Struve International Recruiting"
+  industry:
+    - "Recruiting & HR"
+  types:
+    - "Unternehmenswebsite"
+    - "Branding / Logo"
+  technologies:
+    - "Webflow"
+  collaboration: "Kundenprojekt"
+  tags:
+    - "Recruiting & HR"
+    - "Rebranding"
+  summary: "Recruiting-Auftritt, der komplexe Vermittlung klar erklärt und sofort Vertrauen schafft."
+  result:
+  website_url: "https://www.struve-ir.com/"
+  cover: "/assets/images/projects/struve-international-recruiting-1.webp"
+  cover_alt: "Startseite von Struve International Recruiting"
+  width: 3398
+  height: 1974
+  gallery:
+    - src: "/assets/images/projects/struve-international-recruiting-1.webp"
+      alt: "Struve International Recruiting Hero"
+      caption: "Ein starker Einstieg, der Seriosität, Menschlichkeit und klare Anfrageführung verbindet."
+      width: 3398
+      height: 1974
+    - src: "/assets/images/projects/struve-international-recruiting-2.webp"
+      alt: "Struve International Recruiting Leistungen"
+      caption: "Komplexe Recruiting-Leistung wird in eine ruhige, verständliche Struktur übersetzt."
+      width: 3398
+      height: 1974
+    - src: "/assets/images/projects/struve-international-recruiting-3.webp"
+      alt: "Struve International Recruiting FAQ"
+      caption: "Team, Erklärung und häufige Fragen bauen ab dem ersten Besuch gezielt Vertrauen auf."
+      width: 3398
+      height: 1974
+
+- slug: "wikus-programming"
+  featured: false
+  name: "WIKUS Programming"
+  industry:
+    - "Sport & Fitness"
+  types:
+    - "Unternehmenswebsite"
+    - "Shop"
+  technologies:
+    - "Custom Code"
+    - "Custom CMS"
+    - "Shopify"
+  collaboration: "Kundenprojekt"
+  tags:
+    - "Sport & Fitness"
+    - "Shop"
+  summary: "Coaching-Auftritt, der Struktur, Community und Shop zu einem klaren digitalen System verbindet."
+  result:
+  website_url: "https://wikus-programming.com/"
+  cover: "/assets/images/projects/wikus-programming-1.webp"
+  cover_alt: "Startseite von WIKUS Programming"
+  width: 3420
+  height: 1972
+  gallery:
+    - src: "/assets/images/projects/wikus-programming-1.webp"
+      alt: "WIKUS Programming Hero"
+      caption: "Der Einstieg verbindet Professionalität und Nahbarkeit, damit Coaching, Haltung und Anfrageweg sofort klar werden."
+      width: 3420
+      height: 1972
+    - src: "/assets/images/projects/wikus-programming-2.webp"
+      alt: "WIKUS Programming Angebotsübersicht"
+      caption: "Struktur, Programme und Markenwelt greifen sauber ineinander und geben der wachsenden Community klare Orientierung."
+      width: 3390
+      height: 1868
+    - src: "/assets/images/projects/wikus-programming-3.webp"
+      alt: "WIKUS Programming weitere Detailansicht"
+      caption: "Website und Shop wirken wie ein zusammenhängendes System statt wie zwei getrennte Erlebnisse."
+      width: 3390
+      height: 1868
+
+- slug: "kerem-hillel"
+  featured: false
+  name: "Kerem Hillel"
+  industry:
+    - "Kunst & Kultur"
+  types:
+    - "Portfolio"
+    - "Branding / Logo"
+  technologies:
+    - "WordPress"
+  collaboration: "Kundenprojekt"
+  tags:
+    - "Kunst & Kultur"
+    - "Portfolio"
+  summary: "Klares Portfolio, das künstlerische Arbeit präzise zeigt und Produktionen schnell erfassbar macht."
+  result: null
+  website_url: "https://keremhillel.de/"
+  cover: "/assets/images/projects/kerem-hillel-1.webp"
+  cover_alt: "Startseite von Kerem Hillel"
+  width: 3420
+  height: 1976
+  gallery:
+    - src: "/assets/images/projects/kerem-hillel-1.webp"
+      alt: "Kerem Hillel Hero"
+      caption: "Die reduzierte Gestaltung lässt die Arbeit sprechen und gibt Theatern, Partnern und Veranstaltern sofort Orientierung."
+      width: 3420
+      height: 1976
+    - src: "/assets/images/projects/kerem-hillel-2.png"
+      alt: "Kerem Hillel Portfolio-Struktur"
+      caption: "Aktuelle und vergangene Produktionen werden in einer ruhigen, professionellen Struktur schnell erfassbar."
+      width: 3382
+      height: 1818
+    - src: "/assets/images/projects/kerem-hillel-3.png"
+      alt: "Kerem Hillel weitere Portfolio-Ansicht"
+      caption: "Die Website schafft Sichtbarkeit und Glaubwürdigkeit, ohne die Kunst mit unnötiger Interface-Inszenierung zu überlagern."
+      width: 3382
+      height: 1818
+
+- slug: "mommys-gym"
+  featured: false
+  name: "MOMMYS GYM"
+  industry:
+    - "Sport & Fitness"
+  types:
+    - "Unternehmenswebsite"
+    - "Branding / Logo"
+  technologies:
+    - "WordPress"
+  collaboration: "Kundenprojekt"
+  tags:
+    - "Sport & Fitness"
+    - "Brand Setup"
+  summary: "Marken- und Website-Auftritt, der Schwangerschaft, Rückbildung und Krafttraining in eine warme, professionelle Positionierung übersetzt."
+  result: "Brand Setup von Grund auf mit Logo, Markenrichtung und Website"
+  website_url: "https://mommysgym.de/"
+  cover: "/assets/images/projects/mommys-gym-1.webp"
+  cover_alt: "Startseite von MOMMYS GYM"
+  width: 3400
+  height: 1950
+  gallery:
+    - src: "/assets/images/projects/mommys-gym-1.webp"
+      alt: "Startseite von MOMMYS GYM"
+      caption: "Der Hero macht sofort klar, für wen MOMMYS GYM da ist, und verbindet Stärke, Sicherheit und Spezialisierung in einem präzisen ersten Eindruck."
+      width: 3400
+      height: 1950
+    - src: "/assets/images/projects/mommys-gym-2.webp"
+      alt: "Leistungsübersicht und Brand-System von MOMMYS GYM"
+      caption: "Die visuelle Markenarchitektur ordnet die vier Angebotsbereiche in ein gemeinsames System ein und macht das Brand Setup als zusammenhängendes Konzept sichtbar."
+      width: 3400
+      height: 1950
+    - src: "/assets/images/projects/mommys-gym-3.webp"
+      alt: "Angebotsübersicht auf der Website von MOMMYS GYM"
+      caption: "Partnerbereich und Angebotsübersicht geben schnell Orientierung und halten trotz vieler Leistungen alles ruhig, einladend und gut erfassbar."
+      width: 3400
+      height: 1950
+
+- slug: "neurotidal"
+  featured: false
+  name: "NeuroTidal"
+  industry:
+    - "Musik"
+  types:
+    - "Portfolio"
+  technologies:
+    - "Custom Code"
+  collaboration: "Kundenprojekt"
+  tags:
+    - "Musik"
+    - "Markenauftritt"
+  summary: "Atmosphärischer Band-Auftritt, der Identität, Press-Kit und digitale Präsenz in einer starken Bühne bündelt."
+  result: null
+  website_url: "https://neurotidal.com/"
+  cover: "/assets/images/projects/neurotidal-1.webp"
+  cover_alt: "Startseite von NeuroTidal"
+  width: 3420
+  height: 1968
+  gallery:
+    - src: "/assets/images/projects/neurotidal-1.webp"
+      alt: "NeuroTidal Hero"
+      caption: "Der Auftritt übersetzt Sound, Haltung und Atmosphäre in eine digitale Bühne mit klarer Wiedererkennung."
+      width: 3420
+      height: 1968
+    - src: "/assets/images/projects/neurotidal-2.webp"
+      alt: "NeuroTidal Press Kit und Inhalte"
+      caption: "Trotz starker visueller Identität bleibt die Struktur klar genug, damit Inhalte, Press-Kit und Kontakt direkt zugänglich sind."
+      width: 3420
+      height: 1968
+    - src: "/assets/images/projects/neurotidal-3.webp"
+      alt: "NeuroTidal weitere Ansicht"
+      caption: "Die Seite wirkt eigenständig und immersiv, ohne in Unklarheit oder visuelle Unruhe zu kippen."
+      width: 3420
+      height: 1968
+
+- slug: "aynur-by-mati"
+  featured: false
+  name: "Aynur by Mati"
+  industry:
+    - "Non-Profit & Soziales"
+  types:
+    - "Unternehmenswebsite"
+  technologies:
+    - "Custom Code"
+  collaboration: "Guter Zweck (Pro Bono)"
+  tags:
+    - "Non-Profit"
+    - "Guter Zweck (Pro Bono)"
+  summary: "Sensibler Auftritt, der Haltung, Transparenz und Unterstützung in eine klare Nutzerführung übersetzt."
+  result: ""
+  website_url: "https://aynur-stiftung.de/"
+  cover: "/assets/images/projects/aynur-by-mati-1.webp"
+  cover_alt: "Startseite von Aynur by Mati"
+  width: 3420
+  height: 1976
+  gallery:
+    - src: "/assets/images/projects/aynur-by-mati-1.webp"
+      alt: "Aynur by Mati Hero"
+      caption: "Eine einfühlsame visuelle Sprache, die Haltung, Zweck und Handlungsoptionen sofort verständlich macht."
+      width: 3420
+      height: 1976
+    - src: "/assets/images/projects/aynur-by-mati-2.webp"
+      alt: "Aynur by Mati Wirkung und Transparenz"
+      caption: "Wirkung und Transparenz werden nicht behauptet, sondern ruhig, nachvollziehbar und glaubwürdig gezeigt."
+      width: 3408
+      height: 1900
+    - src: "/assets/images/projects/aynur-by-mati-3.webp"
+      alt: "Aynur by Mati Detailansicht"
+      caption: "Editoriale Bildführung und klare Inhalte transportieren Würde, Nähe und Orientierung zugleich."
+      width: 3408
+      height: 1900
+
+- slug: "dominating-barbells"
+  featured: false
+  name: "Dominating Barbells"
+  industry:
+    - "Sport & Fitness"
+  types:
+    - "Unternehmenswebsite"
+    - "Shop"
+  technologies:
+    - "Custom Code"
+    - "Shopify"
+  collaboration: "Kundenprojekt"
+  tags:
+    - "Sport & Fitness"
+    - "Shop"
+  summary: "Markanter Markenauftritt, der Community, Coaching und Shop in einem klaren System zusammenführt."
+  result: "Kundenstamm verdoppelt im Quartal nach Website-Launch"
+  website_url: "https://dominating-barbells.de/"
+  cover: "/assets/images/projects/dominating-barbells-1.webp"
+  cover_alt: "Startseite von Dominating Barbells"
+  width: 3398
+  height: 1974
+  gallery:
+    - src: "/assets/images/projects/dominating-barbells-1.webp"
+      alt: "Dominating Barbells Hero"
+      caption: "Ein markanter Auftritt, der Zielgruppe, Haltung und Energie sofort auf den Punkt bringt."
+      width: 3398
+      height: 1974
+    - src: "/assets/images/projects/dominating-barbells-2.webp"
+      alt: "Dominating Barbells Shop"
+      caption: "Der Shop ist direkt in die Markenwelt eingebettet und macht aus Aufmerksamkeit zusätzliche Umsatzchancen."
+      width: 3398
+      height: 1974
+    - src: "/assets/images/projects/dominating-barbells-3.webp"
+      alt: "Dominating Barbells Athleten Team"
+      caption: "Team, Wettkämpfe und Community werden sichtbar, damit aus einer Website ein echter Anziehungspunkt für Mitglieder wird."
+      width: 3398
+      height: 1974
+
+- slug: "arc42"
+  featured: false
+  name: "arc42"
+  industry:
+    - "Tech"
+  types:
+    - "Software / Plattform"
+  technologies:
+    - "Custom Code"
+  collaboration: "Guter Zweck (Pro Bono)"
+  tags:
+    - "Tech"
+    - "Guter Zweck (Pro Bono)"
+  summary: "Pro-Bono-Support, der Architektur-Dokumentation, Training und Methodenwissen auf den arc42-Plattformen klar zugänglich hält."
+  result: "Pro-Bono-Support für die internationalen arc42-Plattformen"
+  website_url: "https://arc42.org/"
+  cover: "/assets/images/projects/arc42-1.webp"
+  cover_alt: "Startseite von arc42.org"
+  width: 3392
+  height: 1980
+  gallery:
+    - src: "/assets/images/projects/arc42-1.webp"
+      alt: "Startseite von arc42.org"
+      caption: "Die Startseite hält Template, Training und zentrale Inhalte in einer klaren Open-Source-Plattform für Softwarearchitektur zusammen."
+      width: 3392
+      height: 1980
+    - src: "/assets/images/projects/arc42-2.webp"
+      alt: "Dokumentationsbereich von arc42.org"
+      caption: "Dokumentation und Orientierung bleiben so strukturiert, dass auch komplexe Inhalte schnell verständlich und auffindbar sind."
+      width: 3392
+      height: 1980
+    - src: "/assets/images/projects/arc42-3.webp"
+      alt: "Quality-Model-Bereich auf arc42.org"
+      caption: "Auch tiefere Fachbereiche wie das Quality Model bleiben klar erschließbar und fügen sich sauber in die Gesamtstruktur der Plattform ein."
+      width: 3392
+      height: 1980
+
+- slug: "lynn-starke"
+  featured: false
+  name: "Lynn Starke"
+  industry:
+    - "Sport & Fitness"
+  types:
+    - "Unternehmenswebsite"
+    - "Branding / Logo"
+  technologies:
+    - "Custom Code"
+  collaboration: "Guter Zweck (Pro Bono)"
+  tags:
+    - "Sport & Fitness"
+    - "Guter Zweck (Pro Bono)"
+  summary: "Klare Coaching-Website, die evidenzbasierte Sporternährung, Angebote und Erstgespräch in einen fokussierten Performance-Funnel übersetzt."
+  result: "Pro-Bono-Auftritt mit Drohnenaufnahmen für einen besonders starken Hero-Look und einen klaren Performance-Check-Funnel"
+  website_url: "https://starkelynn.com/"
+  cover: "/assets/images/projects/lynn-starke-1.webp"
+  cover_alt: "Startseite von Lynn Starke"
+  width: 3390
+  height: 1942
+  gallery:
+    - src: "/assets/images/projects/lynn-starke-1.webp"
+      alt: "Startseite von Lynn Starke"
+      caption: "Der Einstieg bringt Positionierung, Zielgruppe und nächstes Handlungssignal sofort in eine klare, leistungsorientierte Struktur."
+      width: 3390
+      height: 1942
+    - src: "/assets/images/projects/lynn-starke-2.webp"
+      alt: "Coaching-Bereich auf der Website von Lynn Starke"
+      caption: "Angebote und Coaching werden ruhig, präzise und ohne Fitness-Marketing-Lärm erklärt."
+      width: 3390
+      height: 1942
+    - src: "/assets/images/projects/lynn-starke-3.webp"
+      alt: "Podcast-Gastauftritte auf der Website von Lynn Starke"
+      caption: "Auch weiterführende Inhalte wie Podcast-Auftritte fügen sich stimmig ein und stärken Expertise statt die Seite zu zerstreuen."
+      width: 3390
+      height: 1942
+
+- slug: "little-green-kitchen"
+  featured: false
+  name: "little green kitchen"
+  industry:
+    - "Gastro & Food"
+  types:
+    - "Unternehmenswebsite"
+  technologies:
+    - "Custom Code"
+  collaboration: "Kundenprojekt"
+  tags:
+    - "Gastro & Food"
+    - "Lokal"
+  summary: "Frischer Café-Auftritt, der Atmosphäre, Speisekarte und Kontakt in eine einladende digitale Präsenz übersetzt."
+  result: null
+  website_url: "https://littlegreenkitchen.de/"
+  cover: "/assets/images/projects/little-green-kitchen-1.webp"
+  cover_alt: "Startseite von little green kitchen"
+  width: 3420
+  height: 1974
+  gallery:
+    - src: "/assets/images/projects/little-green-kitchen-1.webp"
+      alt: "Startseite von little green kitchen"
+      caption: "Der Einstieg transportiert sofort die warme, ruhige Markenwelt des Cafés und schafft eine klare Basis für Menü, Catering und Kontakt."
+      width: 3420
+      height: 1974
+    - src: "/assets/images/projects/little-green-kitchen-2.webp"
+      alt: "little green kitchen auf einem Tablet"
+      caption: "Das Design überträgt die Atmosphäre des Ladens auf alle Geräte, ohne an Klarheit oder Tempo zu verlieren."
+      width: 1575
+      height: 919
+    - src: "/assets/images/projects/little-green-kitchen-3.webp"
+      alt: "Galeriebereich auf der Website von little green kitchen"
+      caption: "Bilder, Galerie und Inhalte wirken nicht dekorativ, sondern stärken Hunger, Wiedererkennung und Orientierung zugleich."
+      width: 3420
+      height: 1974
+
+- slug: "krp-consult"
+  featured: false
+  name: "KRP Consult"
+  industry:
+    - "Consulting & Advisory"
+  types:
+    - "Unternehmenswebsite"
+    - "Branding / Logo"
+  technologies:
+    - "Custom Code"
+    - "Custom CMS"
+  collaboration: "Kundenprojekt"
+  tags:
+    - "Consulting & Advisory"
+    - "Rebranding"
+  summary: "Strukturierter B2B-Auftritt, der komplexe Beratung verständlich macht und in sensiblen Situationen sofort Vertrauen schafft."
+  result: null
+  website_url: "https://krp-consult.de/"
+  cover: "/assets/images/projects/krp-consult-1.webp"
+  cover_alt: "Startseite von KRP Consult"
+  width: 3390
+  height: 1932
+  gallery:
+    - src: "/assets/images/projects/krp-consult-1.webp"
+      alt: "Startseite von KRP Consult"
+      caption: "Der Einstieg bringt Positionierung, Seriosität und direkte Handlungsoptionen in eine ruhige, professionelle Struktur."
+      width: 3390
+      height: 1932
+    - src: "/assets/images/projects/krp-consult-2.webp"
+      alt: "Leistungsübersicht auf der Website von KRP Consult"
+      caption: "Komplexe Leistungen werden so aufbereitet, dass auch anspruchsvolle Beratungssituationen schnell erfassbar bleiben."
+      width: 3390
+      height: 1932
+    - src: "/assets/images/projects/krp-consult-3.webp"
+      alt: "Früherer Auftritt von KRP Consult vor dem Rebranding"
+      caption: "Vorher: Der frühere Auftritt wirkte weniger klar, weniger konsistent und spiegelte die Professionalität von KRP Consult nicht präzise genug wider."
+      width: 2714
+      height: 1718
+
+- slug: "powerlifting-wuerzburg"
+  featured: false
+  name: "Powerlifting Würzburg"
+  industry:
+    - "Sport & Fitness"
+  types:
+    - "Branding / Logo"
+  technologies: []
+  collaboration: "Kundenprojekt"
+  tags:
+    - "Sport & Fitness"
+    - "Logo Design"
+  summary: "Markantes Event-Logo, das Energie, Wettkampfcharakter und nationale Bühne für die Deutschen Juniorenmeisterschaften im Powerlifting bündelt."
+  result: "Logo-Entwicklung für die Deutschen Junioren- und Sub-Juniorenmeisterschaften 2025"
+  cover: "/assets/images/projects/powerlifting-wuerzburg-1.webp"
+  cover_alt: "Logo für Powerlifting Würzburg"
+  width: 2886
+  height: 1664
+  gallery:
+    - src: "/assets/images/projects/powerlifting-wuerzburg-1.webp"
+      alt: "Logo für Powerlifting Würzburg"
+      caption: "Das Logo verbindet Kraftsport, Gastgeberstadt und Meisterschaftscharakter zu einer markanten, sofort wiedererkennbaren Form."
+      width: 2886
+      height: 1664
+    - src: "/assets/images/projects/powerlifting-wuerzburg-3.webp"
+      alt: "Logo-Anwendung auf Bekleidung für Powerlifting Würzburg"
+      caption: "Auch in der Anwendung bleibt die Marke klar, kontraststark und stolz genug für einen nationalen Wettkampfauftritt."
+      width: 1056
+      height: 1730

@@ -1,0 +1,46 @@
+<header class="site-header" data-site-header>
+  <div class="shell site-header__inner">
+    <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }}">
+      <span class="site-brand__wordmark">{{ site.title }}</span>
+    </a>
+
+    <button
+      class="site-header__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="site-nav"
+      data-nav-toggle
+    >
+      <span class="visually-hidden">Navigation umschalten</span>
+      <span class="site-header__toggle-line"></span>
+      <span class="site-header__toggle-line"></span>
+      <span class="site-header__toggle-line"></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation" data-nav>
+      <ul class="site-nav__list">
+        {% for link in site.data.navigation.main %}
+          <li class="site-nav__item">
+            <a
+              class="site-nav__link{% if link.url == '/' %}{% if page.url == '/' or page.url == '/index.html' %} is-current{% endif %}{% elsif page.url contains link.url %} is-current{% endif %}"
+              href="{{ link.url | relative_url }}"
+              {% if link.url == '/' %}{% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}{% elsif page.url contains link.url %}aria-current="page"{% endif %}
+            >
+              {{ link.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+      {% if site.data.navigation.cta %}
+        <a
+          class="button button--primary button--small site-nav__cta{% if site.data.navigation.cta.url == '/' %}{% if page.url == '/' or page.url == '/index.html' %} is-current{% endif %}{% elsif page.url contains site.data.navigation.cta.url %} is-current{% endif %}"
+          href="{{ site.data.navigation.cta.url | relative_url }}"
+          {% if site.data.navigation.cta.url == '/' %}{% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}{% elsif page.url contains site.data.navigation.cta.url %}aria-current="page"{% endif %}
+        >
+          {{ site.data.navigation.cta.title }}
+        </a>
+      {% endif %}
+    </nav>
+  </div>
+</header>

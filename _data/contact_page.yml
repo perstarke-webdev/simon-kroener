@@ -1,0 +1,26 @@
+hero:
+  label: "Projekt anfragen"
+  title: "Projekt anfragen"
+  subtitle: "Erzähl mir kurz, worum es geht."
+  support: "Ich melde mich persönlich bei dir und sage dir ehrlich, wie ich deinen Auftritt in Design, Struktur und Wirkung einschätze."
+
+form:
+  name_label: "Dein Name*"
+  name_placeholder: "Max Mustermann"
+  email_label: "Deine E-Mail*"
+  email_placeholder: "max@beispiel.ch"
+  website_label: "Deine Website (optional)"
+  website_placeholder: "www.beispiel.ch"
+  message_label: "Worum geht es bei deinem Projekt?*"
+  message_placeholder: "Kurze Beschreibung deines Projekts, deiner Ziele oder deiner aktuellen Situation"
+  submit_label: "Projekt anfragen"
+  success_message: "Danke, ich melde mich persönlich bei dir."
+
+analysis:
+  label: "Oder starte mit einer Analyse"
+  title: "Erst einmal den Ist-Stand prüfen?"
+  text: "Mit dem kostenlosen Website-Check bekommst du eine erste Einschätzung dazu, wo dein aktueller Auftritt an Klarheit, Wiedererkennung oder technischer Qualität verliert."
+
+direct:
+  title: "Direkter Kontakt"
+  intro: "Wenn du lieber direkt schreiben oder anrufen möchtest:"

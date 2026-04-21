@@ -1,0 +1,9 @@
+{
+  "name": "kroener-starke",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Kröner & Starke website draft",
+  "scripts": {
+    "start": "docker compose up"
+  }
+}

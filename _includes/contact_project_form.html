@@ -1,0 +1,91 @@
+{% assign form_id = include.id_prefix | default: "project-contact" %}
+{% assign form_data = include.form %}
+
+<form
+  class="contact-form"
+  data-project-form
+  data-form-mode="{{ site.form_mode }}"
+  data-form-endpoint="{{ site.formspark_endpoint }}"
+  data-form-context="{{ include.context | default: 'contact-page' }}"
+  data-form-min-submit-ms="{{ site.form_min_submit_ms | default: 1800 }}"
+  novalidate
+>
+  <input type="hidden" name="source" value="{{ include.context | default: 'contact-page' }}">
+  <div class="form-honeypot" aria-hidden="true">
+    <label for="{{ form_id }}-company">Bitte dieses Feld leer lassen</label>
+    <input
+      id="{{ form_id }}-company"
+      name="_honeypot"
+      type="text"
+      tabindex="-1"
+      autocomplete="off"
+    >
+  </div>
+
+  <div class="contact-form__grid">
+    <div class="form-field">
+      <label for="{{ form_id }}-name">{{ form_data.name_label }}</label>
+      <input
+        id="{{ form_id }}-name"
+        name="name"
+        type="text"
+        autocomplete="name"
+        placeholder="{{ form_data.name_placeholder }}"
+        required
+        aria-describedby="{{ form_id }}-name-error"
+      >
+      <p class="form-field__error" id="{{ form_id }}-name-error" data-error-for="name"></p>
+    </div>
+
+    <div class="form-field">
+      <label for="{{ form_id }}-email">{{ form_data.email_label }}</label>
+      <input
+        id="{{ form_id }}-email"
+        name="email"
+        type="email"
+        inputmode="email"
+        autocomplete="email"
+        placeholder="{{ form_data.email_placeholder }}"
+        required
+        aria-describedby="{{ form_id }}-email-error"
+      >
+      <p class="form-field__error" id="{{ form_id }}-email-error" data-error-for="email"></p>
+    </div>
+
+    <div class="form-field contact-form__field--full">
+      <label for="{{ form_id }}-website">{{ form_data.website_label }}</label>
+      <input
+        id="{{ form_id }}-website"
+        name="website"
+        type="text"
+        inputmode="url"
+        autocomplete="url"
+        placeholder="{{ form_data.website_placeholder }}"
+        aria-describedby="{{ form_id }}-website-error"
+      >
+      <p class="form-field__error" id="{{ form_id }}-website-error" data-error-for="website"></p>
+    </div>
+
+    <div class="form-field contact-form__field--full">
+      <label for="{{ form_id }}-message">{{ form_data.message_label }}</label>
+      <textarea
+        id="{{ form_id }}-message"
+        name="message"
+        rows="6"
+        placeholder="{{ form_data.message_placeholder }}"
+        required
+        aria-describedby="{{ form_id }}-message-error"
+      ></textarea>
+      <p class="form-field__error" id="{{ form_id }}-message-error" data-error-for="message"></p>
+    </div>
+  </div>
+
+  <div class="site-check-form__actions">
+    <button class="button button--primary" type="submit" data-submit-label="{{ form_data.submit_label }}">
+      {{ form_data.submit_label }}
+    </button>
+  </div>
+
+  <p class="site-check-form__status" aria-live="polite" data-form-status></p>
+  <p class="site-check-form__success" hidden data-form-success>{{ form_data.success_message }}</p>
+</form>

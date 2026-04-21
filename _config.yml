@@ -1,0 +1,147 @@
+oneflow-skin: "default"
+
+locale: "de-CH"
+title: "Simon Kröner"
+title_separator: "-"
+description: "Webdesign, das niemand vergisst und Anfragen, die nicht mehr aufhören. Simon Kröner entwickelt Websites und Markenauftritte, die Vertrauen schaffen und verkaufen."
+url: "https://simonkroener.ch"
+baseurl: ""
+repository: "perstarke/simon-kroener"
+logo:
+masthead_title: " "
+sticky-masthead: true
+masthead-opacity: 0.96
+show-popup: false
+background-image:
+background-image-mobile:
+background-image-overlay: rgba(255, 255, 255, 0.5)
+og_image: "/assets/images/people/simon-hero-portrait.png"
+og_image_alt: "Simon Kröner"
+og_image_width: 1694
+og_image_height: 2528
+draft_mode: false
+form_mode: "formspark"
+formspark_endpoint: "https://submit-form.com/qmOOtdX2O"
+form_min_submit_ms: 1800
+allow_project_filter: true
+
+branding:
+  claim: "Webdesign, das niemand vergisst und Anfragen, die nicht mehr aufhören."
+  collaboration:
+    simon_name: "Simon Kröner"
+    simon_url: "https://www.linkedin.com/in/simon-kr%C3%B6ner/"
+    per_name: "Per Starke"
+    per_url: "https://www.linkedin.com/in/per-starke-webdev/"
+    kswd_name: "Kröner & Starke"
+    kswd_url: "https://kroener-starke.ch/"
+
+contact:
+  email: "simon.kroener@kroener-starke.ch"
+  phone: "+41 79 138 92 45"
+  placeholder_note: ""
+
+legal:
+  operator_name: "Simon Kröner"
+  last_updated: "23. März 2026"
+  contracting_business: "Kröner Consulting"
+  site_url: "https://www.simonkroener.ch"
+  simon:
+    business_name: "Kröner Consulting"
+    name: "Simon Kröner"
+    role: "Vertrieb, Design & Branding"
+    address_line_1: "Chrottegässli 28"
+    postal_city: "3065 Bolligen, Bern"
+    country: "Schweiz"
+    email: "simon.kroener@kroener-starke.ch"
+    website: "https://www.simonkroener.ch"
+
+social:
+  type: "Person"
+  name: "Simon Kröner"
+  links:
+    - "https://www.linkedin.com/in/simon-kr%C3%B6ner/"
+    - "https://kroener-starke.ch/"
+
+footer_scripts:
+  - "/assets/js/site.js"
+
+include:
+  - .htaccess
+  - _pages
+
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README
+  - tmp
+
+keep_files:
+  - .git
+  - .svn
+
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+whitelist:
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+defaults:
+  - scope:
+      path: "_pages"
+      type: "pages"
+    values:
+      layout: "page"

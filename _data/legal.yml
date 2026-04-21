@@ -1,0 +1,15 @@
+operator_name: "Simon Kröner"
+last_updated: "23. März 2026"
+contracting_business: "Kröner Consulting"
+site_url: "https://www.simonkroener.ch"
+
+simon:
+  business_name: "Kröner Consulting"
+  name: "Simon Kröner"
+  role: "Vertrieb, Design & Branding"
+  address_line_1: "Chrottegässli 28"
+  postal_city: "3065 Bolligen, Bern"
+  country: "Schweiz"
+  email: "simon.kroener@kroener-starke.ch"
+  phone: "+41 79 138 92 45"
+  website: "https://www.simonkroener.ch"

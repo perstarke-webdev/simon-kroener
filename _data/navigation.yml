@@ -1,0 +1,31 @@
+main:
+  - title: "Projekte"
+    url: "/projekte/"
+  - title: "Leistungen"
+    url: "/leistungen/"
+  - title: "Über mich"
+    url: "/ueber-mich/"
+
+cta:
+  title: "Projekt anfragen"
+  url: "/kontakt/"
+
+footer:
+  - title: "Home"
+    url: "/"
+  - title: "Projekte"
+    url: "/projekte/"
+  - title: "Leistungen"
+    url: "/leistungen/"
+  - title: "Über mich"
+    url: "/ueber-mich/"
+  - title: "Kontakt"
+    url: "/kontakt/"
+
+legal:
+  - title: "Impressum"
+    url: "/impressum/"
+  - title: "Datenschutz"
+    url: "/datenschutz/"
+  - title: "AGB"
+    url: "/agb/"

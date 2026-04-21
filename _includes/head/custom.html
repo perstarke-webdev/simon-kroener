@@ -1,0 +1,31 @@
+<!-- start custom head snippets -->
+
+<link
+  rel="preload"
+  href="{{ '/assets/fonts/inter/inter-600-subset.woff' | relative_url }}"
+  as="font"
+  type="font/woff"
+  crossorigin
+>
+
+{% if page.url == '/' or page.url == '/index.html' %}
+<link
+  rel="preload"
+  as="image"
+  href="{{ '/assets/images/people/duo-portrait-640.webp' | relative_url }}"
+  imagesrcset="{{ '/assets/images/people/duo-portrait-640.webp' | relative_url }} 640w, {{ '/assets/images/people/duo-portrait-960.webp' | relative_url }} 960w, {{ '/assets/images/people/duo-portrait.webp' | relative_url }} 1500w"
+  imagesizes="(max-width: 699px) calc(100vw - 40px), (max-width: 1100px) min(100vw - 40px, 720px), 420px"
+  fetchpriority="high"
+>
+{% endif %}
+
+<link rel="icon" href="{{ '/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="icon" href="{{ '/favicon-96x96.png' | relative_url }}" sizes="96x96" type="image/png">
+<link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/apple-touch-icon.png' | relative_url }}">
+<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+
+<meta name="theme-color" content="#1a0533">
+<meta name="msapplication-TileColor" content="#1a0533">
+
+<!-- end custom head snippets -->

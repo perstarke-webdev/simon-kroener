@@ -1,0 +1,7 @@
+---
+permalink: /robots.txt
+---
+User-agent: *
+{% if site.draft_mode %}Disallow: /{% else %}Allow: /{% endif %}
+
+Sitemap: {{ '/sitemap.xml' | absolute_url }}

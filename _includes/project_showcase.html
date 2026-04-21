@@ -1,0 +1,89 @@
+{% assign dialog_prefix = include.dialog_prefix | default: "dialog" %}
+
+<div class="portfolio-grid{% if include.grid_class %} {{ include.grid_class }}{% endif %}">
+  {% for project in include.projects %}
+    {% assign dialog_id = dialog_prefix | append: '-' | append: project.slug %}
+    <article
+      class="project-card"
+      data-project-card
+      data-industry="{{ project.industry | join: '||' }}"
+      data-types="{{ project.types | join: '||' }}"
+      data-technologies="{{ project.technologies | join: '||' }}"
+      data-collaboration="{{ project.collaboration }}"
+    >
+      <button class="project-card__image-trigger" type="button" data-dialog-target="{{ dialog_id }}" aria-label="{{ project.name }} Galerie öffnen">
+        <div class="project-card__image project-card__image--{{ project.slug }}">
+          <img
+            src="{{ project.cover | relative_url }}"
+            alt="{{ project.cover_alt | default: project.name }}"
+            loading="lazy"
+            {% if project.width %}width="{{ project.width }}"{% endif %}
+            {% if project.height %}height="{{ project.height }}"{% endif %}
+          >
+        </div>
+      </button>
+      <div class="project-card__content">
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.summary }}</p>
+        {% if project.result %}
+          <p class="project-card__result">{{ project.result }}</p>
+        {% endif %}
+        {% if project.website_url %}
+          <a class="project-card__external" href="{{ project.website_url }}" target="_blank" rel="noopener noreferrer">
+            Website ansehen
+            <span class="inline-icon inline-icon--external" aria-hidden="true">&#8599;</span>
+          </a>
+        {% endif %}
+        {% if include.show_tags and project.tags and project.tags.size > 0 %}
+          <ul class="project-card__tags" aria-label="Projekt-Tags">
+            {% for tag in project.tags limit: 2 %}
+              <li>{{ tag }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </article>
+  {% endfor %}
+</div>
+
+{% for project in include.projects %}
+  {% assign dialog_id = dialog_prefix | append: '-' | append: project.slug %}
+  <dialog class="project-dialog" id="{{ dialog_id }}" data-project-dialog aria-labelledby="{{ dialog_id }}-title">
+    <div class="project-dialog__header">
+      <div>
+        <h2 id="{{ dialog_id }}-title">{{ project.name }}</h2>
+      </div>
+      <button class="project-dialog__close" type="button" data-dialog-close aria-label="Galerie schließen">
+        <span class="inline-icon inline-icon--close" aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+    <p class="project-dialog__summary">{{ project.summary }}</p>
+    {% if project.result %}
+      <p class="project-dialog__result">{{ project.result }}</p>
+    {% endif %}
+    {% if project.website_url %}
+      <p class="project-dialog__external-wrap">
+        <a class="project-dialog__external" href="{{ project.website_url }}" target="_blank" rel="noopener noreferrer">
+          Website ansehen
+          <span class="inline-icon inline-icon--external" aria-hidden="true">&#8599;</span>
+        </a>
+      </p>
+    {% endif %}
+
+    <div class="project-dialog__gallery">
+      {% for image in project.gallery %}
+        <figure>
+          <img
+            src="{{ image.src | relative_url }}"
+            alt="{{ image.alt }}"
+            loading="lazy"
+            {% if image.width %}width="{{ image.width }}"{% elsif project.width %}width="{{ project.width }}"{% endif %}
+            {% if image.height %}height="{{ image.height }}"{% elsif project.height %}height="{{ project.height }}"{% endif %}
+          >
+          <figcaption>{{ image.caption }}</figcaption>
+        </figure>
+      {% endfor %}
+    </div>
+  </dialog>
+{% endfor %}

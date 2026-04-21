@@ -1,0 +1,30 @@
+pain:
+  title: "Wie stark wirkt deine Website heute wirklich?"
+  intro: "Im kostenlosen Website-Check zeige ich dir, wo dein aktueller Auftritt an Klarheit, Wiedererkennung oder technischer Qualität verliert und wo die größten Hebel für einen stärkeren Gesamteindruck liegen."
+  audit_title: "Kostenloser Website-Check"
+  audit_text: "Schick mir deine Domain und ich melde mich mit einer ehrlichen ersten Einschätzung zu Wirkung, Struktur und Performance."
+  bullet_points:
+    - "klarere visuelle Hierarchie"
+    - "stimmigeres Branding und bessere Wiedererkennung"
+    - "sauberere Struktur und schnellere Nutzerführung"
+  form:
+    domain_label: "Deine Domain"
+    domain_placeholder: "beispiel.ch"
+    phone_label: "Deine Telefonnummer"
+    phone_placeholder: "+41 00 000 00 00"
+    submit_label: "Website analysieren"
+    success_message: "Danke, ich melde mich bei dir."
+    privacy_note: ""
+
+portfolio:
+  cta:
+    label: "Gesamtes Portfolio ansehen"
+    url: "/projekte/"
+
+final_cta:
+  label: "Projekt starten"
+  title: "Bereit für einen Auftritt mit Klarheit, Charakter und technischer Ruhe?"
+  text: "Ich entwickle Websites und Markenauftritte, die eigenständig aussehen, sauber funktionieren und deine Qualität digital präzise transportieren."
+  primary_cta:
+    label: "Projekt anfragen"
+    url: "/kontakt/"

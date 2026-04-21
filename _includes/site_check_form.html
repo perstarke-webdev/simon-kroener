@@ -1,0 +1,69 @@
+{% assign form_id = include.id_prefix | default: "site-check" %}
+{% assign form_data = include.form %}
+{% assign variant = include.variant | default: "default" %}
+
+<form
+  class="site-check-form site-check-form--{{ variant }}"
+  data-site-check-form
+  data-form-mode="{{ site.form_mode }}"
+  data-form-endpoint="{{ site.formspark_endpoint }}"
+  data-form-context="{{ include.context | default: 'homepage' }}"
+  data-form-min-submit-ms="{{ site.form_min_submit_ms | default: 1800 }}"
+  novalidate
+>
+  <input type="hidden" name="source" value="{{ include.context | default: 'homepage' }}">
+  <div class="form-honeypot" aria-hidden="true">
+    <label for="{{ form_id }}-company">Bitte dieses Feld leer lassen</label>
+    <input
+      id="{{ form_id }}-company"
+      name="_honeypot"
+      type="text"
+      tabindex="-1"
+      autocomplete="off"
+    >
+  </div>
+
+  <div class="site-check-form__row">
+    <div class="form-field">
+      <label for="{{ form_id }}-domain">{{ form_data.domain_label }}</label>
+      <input
+        id="{{ form_id }}-domain"
+        name="domain"
+        type="text"
+        inputmode="url"
+        autocomplete="url"
+        placeholder="{{ form_data.domain_placeholder }}"
+        required
+        aria-describedby="{{ form_id }}-domain-error"
+      >
+      <p class="form-field__error" id="{{ form_id }}-domain-error" data-error-for="domain"></p>
+    </div>
+
+    <div class="form-field">
+      <label for="{{ form_id }}-phone">{{ form_data.phone_label }}</label>
+      <input
+        id="{{ form_id }}-phone"
+        name="phone"
+        type="tel"
+        inputmode="tel"
+        autocomplete="tel"
+        placeholder="{{ form_data.phone_placeholder }}"
+        required
+        aria-describedby="{{ form_id }}-phone-error"
+      >
+      <p class="form-field__error" id="{{ form_id }}-phone-error" data-error-for="phone"></p>
+    </div>
+  </div>
+
+  <div class="site-check-form__actions">
+    <button class="button button--primary" type="submit" data-submit-label="{{ form_data.submit_label }}">
+      {{ form_data.submit_label }}
+    </button>
+    {% if form_data.privacy_note != blank %}
+      <p class="site-check-form__privacy">{{ form_data.privacy_note }}</p>
+    {% endif %}
+  </div>
+
+  <p class="site-check-form__status" aria-live="polite" data-form-status></p>
+  <p class="site-check-form__success" hidden data-form-success>{{ form_data.success_message }}</p>
+</form>
