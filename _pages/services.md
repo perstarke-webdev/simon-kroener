@@ -45,7 +45,7 @@ classes:
 <section class="section section--cream services-page__problem">
   <div class="shell section-grid services-page__problem-grid">
     <div class="section-heading">
-      <h2>Wo digitale Auftritte oft an Kraft verlieren</h2>
+      <h2>Wo Auftritte an Kraft verlieren</h2>
     </div>
 
     <article class="services-page__problem-card services-page__problem-card--list">
@@ -154,20 +154,6 @@ classes:
           <span>eine stabile Basis für Sichtbarkeit und Weiterentwicklung schafft</span>
         </li>
       </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section section--cream services-page__difference">
-  <div class="shell services-page__difference-card">
-    <div class="section-heading">
-      <h2>Mein Fokus dabei</h2>
-    </div>
-
-    <div class="services-page__difference-copy">
-      <p class="section-lead section-lead--light">Webdesign, Branding und Performance müssen dieselbe Qualität ausstrahlen.</p>
-      <p>Ich arbeite bewusst an dieser Verbindung, damit ein Auftritt nicht nur modern aussieht, sondern auch in seiner Struktur, Geschwindigkeit und Tonalität überzeugt.</p>
-      <p>Genau dort entsteht die Ruhe und Eigenständigkeit, die starke Websites von austauschbaren trennt.</p>
     </div>
   </div>
 </section>

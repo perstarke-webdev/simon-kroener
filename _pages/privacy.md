@@ -1,7 +1,7 @@
 ---
 title: "Datenschutz"
 permalink: /datenschutz/
-description: "Datenschutzerklaerung fuer simonkroener.ch nach schweizerischem Datenschutzrecht."
+description: "Datenschutzerklärung für simonkroener.ch nach schweizerischem Datenschutzrecht."
 classes:
   - legal-page
 ---

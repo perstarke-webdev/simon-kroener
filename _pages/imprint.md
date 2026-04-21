@@ -1,7 +1,7 @@
 ---
 title: "Impressum"
 permalink: /impressum/
-description: "Impressum fuer den Webauftritt von Simon Kroener."
+description: "Impressum für den Webauftritt von Simon Kröner."
 classes:
   - legal-page
 ---

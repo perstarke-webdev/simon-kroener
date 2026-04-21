@@ -1,7 +1,7 @@
 ---
 title: "AGB"
 permalink: /agb/
-description: "Allgemeine Geschaeftsbedingungen fuer Leistungen von Kroener Consulting."
+description: "Allgemeine Geschäftsbedingungen für Leistungen von Kröner Consulting."
 classes:
   - legal-page
 ---

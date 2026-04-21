@@ -14,7 +14,7 @@ form:
   message_label: "Worum geht es bei deinem Projekt?*"
   message_placeholder: "Kurze Beschreibung deines Projekts, deiner Ziele oder deiner aktuellen Situation"
   submit_label: "Projekt anfragen"
-  success_message: "Danke, ich melde mich persönlich bei dir."
+  success_message: "Danke – ich habe deine Anfrage erhalten und melde mich persönlich, in der Regel noch am selben Werktag."
 
 analysis:
   label: "Oder starte mit einer Analyse"

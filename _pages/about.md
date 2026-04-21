@@ -67,15 +67,15 @@ classes:
     </div>
 
     <div class="about-page__why-grid about-page__why-grid--three">
-      <article class="about-page__why-card about-page__why-card--pain">
+      <article class="about-page__why-card">
         <p class="section-lead">Klarheit</p>
         <p>Ein guter Auftritt ordnet Inhalte so, dass Besucher sofort verstehen, worum es geht und worauf sie schauen sollen.</p>
       </article>
-      <article class="about-page__why-card about-page__why-card--solution">
+      <article class="about-page__why-card">
         <p class="section-lead">Charakter</p>
         <p>Markenwirkung entsteht durch konsequente Entscheidungen in Typografie, Farbe, Bildwelt und Tonalität.</p>
       </article>
-      <article class="about-page__why-card about-page__why-card--solution">
+      <article class="about-page__why-card">
         <p class="section-lead">Substanz</p>
         <p>Gestaltung wirkt nur dann hochwertig, wenn die technische Basis schnell, sauber und belastbar ist.</p>
       </article>

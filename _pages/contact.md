@@ -40,16 +40,6 @@ classes:
         <p>{{ contact.analysis.text }}</p>
         {% include site_check_form.html id_prefix="contact-check" form=home.pain.form context="contact-check" variant="dark" %}
       </div>
-
-      <div class="contact-page__direct-card">
-        <h3>{{ contact.direct.title }}</h3>
-        <p>{{ contact.direct.intro }}</p>
-        <div class="contact-page__direct-links">
-          <a class="site-footer__link" href="mailto:{{ legal.simon.email }}">{{ legal.simon.email }}</a>
-          <a class="site-footer__link" href="tel:{{ site.contact.phone | replace: ' ', '' }}">{{ site.contact.phone }}</a>
-          <a class="site-footer__link" href="{{ legal.simon.website }}" target="_blank" rel="noopener noreferrer">{{ legal.simon.website | replace: 'https://', '' }}</a>
-        </div>
-      </div>
     </div>
   </div>
 </section>
