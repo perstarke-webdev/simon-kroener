@@ -11,8 +11,8 @@ classes:
   <div class="shell services-page__hero-shell">
     <div class="hero-section__copy services-page__hero-copy">
       <p class="section-label section-label--hero"><span class="status-dot" aria-hidden="true"></span>Webdesign · Branding · Performance</p>
-      <h1>Drei Disziplinen. Ein Auftritt.</h1>
-      <p class="hero-section__subtitle">Ich arbeite nicht mit getrennten Baustellen, sondern mit einer klaren Linie: Gestaltung, Markenwirkung und technische Qualität greifen von Anfang an ineinander.</p>
+      <h1>Ein Auftritt, der als Ganzes überzeugt.</h1>
+      <p class="hero-section__subtitle">Ich entwickle Websites nicht aus Einzelleistungen, sondern aus Klarheit, Wiedererkennung und einer technischen Basis, die das Niveau der Gestaltung mitträgt.</p>
 
       <div class="hero-section__actions">
         <a class="button button--primary" href="{{ '/kontakt/' | relative_url }}">Projekt anfragen</a>
@@ -24,18 +24,18 @@ classes:
       <div class="services-page__hero-pillars">
         <article class="services-page__hero-pillar">
           <span>01</span>
-          <h3>Webdesign</h3>
-          <p>klare Hierarchie und starke Screens</p>
+          <h3>Klarer Aufbau</h3>
+          <p>Inhalte, Hierarchie und nächste Schritte greifen sauber ineinander.</p>
         </article>
         <article class="services-page__hero-pillar">
           <span>02</span>
-          <h3>Branding</h3>
-          <p>Wiedererkennung mit Haltung</p>
+          <h3>Markanter Eindruck</h3>
+          <p>Gestaltung, Ton und Bildwelt wirken wie aus einem Guss.</p>
         </article>
         <article class="services-page__hero-pillar">
           <span>03</span>
-          <h3>Performance</h3>
-          <p>saubere Frontends und stabile Basis</p>
+          <h3>Saubere Basis</h3>
+          <p>Die Website bleibt schnell, stabil und langfristig pflegbar.</p>
         </article>
       </div>
     </aside>
@@ -45,43 +45,43 @@ classes:
 <section class="section section--cream services-page__problem">
   <div class="shell section-grid services-page__problem-grid">
     <div class="section-heading services-page__split-heading">
-      <h2>Wo Auftritte an Kraft verlieren</h2>
-      <p class="section-lead">Viele Websites haben einzelne gute Elemente, aber kein klares Ganzes. Genau diese Bruchstellen machen einen Auftritt schwächer als er sein müsste.</p>
+      <h2>Warum viele Websites trotz Aufwand nicht richtig tragen</h2>
+      <p class="section-lead">Oft ist nicht eine einzige Sache falsch. Es sind mehrere kleine Brüche, die zusammen dafür sorgen, dass ein Auftritt schwächer wirkt, als das Unternehmen dahinter eigentlich ist.</p>
     </div>
 
     <article class="services-page__problem-card services-page__problem-card--list">
-      <p class="section-kicker">Der Grund:</p>
+      <p class="section-kicker">Typische Bruchstellen</p>
       <ul class="services-page__problem-list">
-        <li>Der erste Eindruck ist zu beliebig.</li>
-        <li>Marke und Inhalt sprechen nicht dieselbe Sprache.</li>
-        <li>Performance und Struktur bleiben hinter der Gestaltung zurück.</li>
-        <li>Mobile und Desktop fühlen sich nicht gleich präzise an.</li>
+        <li>Der erste Eindruck ist ordentlich, aber nicht prägnant genug.</li>
+        <li>Marke, Texte und Gestaltung ziehen nicht in dieselbe Richtung.</li>
+        <li>Mobil verliert der Auftritt Klarheit, Tempo oder Übersicht.</li>
+        <li>Technik und Struktur fühlen sich wie Nacharbeit statt wie Teil der Qualität an.</li>
       </ul>
-      <p class="services-page__problem-result">Genau dort setze ich an: beim Gesamtbild.</p>
+      <p class="services-page__problem-result">Genau dort beginne ich: nicht bei einer Einzeldisziplin, sondern beim Gesamtbild.</p>
     </article>
   </div>
 </section>
 
-<section class="section section--white services-page__system">
+<section class="section section--deep services-page__system">
   <div class="shell">
     <div class="section-heading">
-      <h2>Keine getrennten Disziplinen</h2>
-      <p class="section-lead">Ein starker Auftritt entsteht dann, wenn Gestaltung, Markenwirkung und technische Qualität sich gegenseitig stützen.</p>
+      <h2>Worauf ich in jedem Projekt besonders achte</h2>
+      <p class="section-lead">Eine Website überzeugt nicht nur über Oberfläche. Sie muss Orientierung geben, wiedererkennbar sein und technisch so sauber funktionieren, wie sie visuell auftritt.</p>
     </div>
 
     <div class="services-page__system-layout">
       <article class="services-page__system-panel">
         <div class="services-page__system-copy">
-          <p>Ich verbinde modernes Webdesign mit einer klaren Markenperspektive und einer sauberen technischen Basis.</p>
-          <p>So wirkt ein Auftritt nicht nur an der Oberfläche stark, sondern trägt seine Qualität durch jede Seite, jeden Breakpoint und jede Interaktion.</p>
-          <p>Das Ergebnis ist eine Website, die markant aussieht und sich klar, schnell und hochwertig anfühlt.</p>
+          <p>Ein Auftritt muss schnell verständlich machen, worum es geht, für wen er gedacht ist und welcher nächste Schritt Sinn ergibt.</p>
+          <p>Er braucht einen eigenen Charakter. Nicht laut um jeden Preis, sondern so klar, dass man ihn wiedererkennt und mit deinem Anspruch verbindet.</p>
+          <p>Und er muss stabil gebaut sein. Gute Gestaltung verliert an Wert, wenn Ladezeit, Struktur oder Pflege im Alltag nicht mithalten.</p>
         </div>
       </article>
 
       <div class="services-page__system-pillars">
-        <span>Positionierung</span>
-        <span>Design</span>
-        <span>Performance</span>
+        <span>Klarheit</span>
+        <span>Charakter</span>
+        <span>Substanz</span>
       </div>
     </div>
   </div>
@@ -137,24 +137,24 @@ classes:
 <section class="section section--white services-page__outcomes">
   <div class="shell section-grid services-page__outcomes-grid">
     <div class="section-heading services-page__split-heading">
-      <h2>Was du am Ende bekommst</h2>
-      <p class="section-lead">Keinen Sammelplatz aus Einzelmaßnahmen, sondern einen Auftritt, der klar wirkt, belastbar gebaut ist und sich konsequent nach deiner Qualität anfühlt.</p>
+      <h2>Woran du den Unterschied am Ende merkst</h2>
+      <p class="section-lead">Nicht an einzelnen Designentscheidungen, sondern daran, wie geschlossen der ganze Auftritt wirkt und wie selbstverständlich er sich benutzen lässt.</p>
     </div>
 
     <div class="services-page__outcomes-card">
-      <p class="section-kicker">Das Ergebnis ist ein Auftritt, der</p>
+      <p class="section-kicker">Dein Auftritt wirkt am Ende so, dass er</p>
       <ul class="check-list">
         <li>
           <span class="inline-icon inline-icon--check" aria-hidden="true">&#10003;</span>
-          <span>deine Marke klar und hochwertig sichtbar macht</span>
+          <span>deine Qualität sichtbar macht, ohne sie erst ausführlich erklären zu müssen</span>
         </li>
         <li>
           <span class="inline-icon inline-icon--check" aria-hidden="true">&#10003;</span>
-          <span>auf Desktop und Mobile gleich präzise funktioniert</span>
+          <span>auf Desktop und Mobile gleich präzise und ruhig funktioniert</span>
         </li>
         <li>
           <span class="inline-icon inline-icon--check" aria-hidden="true">&#10003;</span>
-          <span>eine stabile Basis für Sichtbarkeit und Weiterentwicklung schafft</span>
+          <span>auch nach dem Launch eine saubere Basis für Sichtbarkeit und Weiterentwicklung bleibt</span>
         </li>
       </ul>
     </div>
