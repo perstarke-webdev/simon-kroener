@@ -28,15 +28,26 @@ classes:
 
     <div class="simon-hero__visual" data-hero-fade-visual>
       <div class="simon-hero__portrait" data-hero-fade-portrait>
-        <img
-          src="{{ '/assets/images/people/simon-hero-portrait-hero.png' | relative_url }}"
-          alt="Simon Kröner"
-          width="1694"
-          height="2109"
-          loading="eager"
-          fetchpriority="high"
-          decoding="async"
-        >
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              {{ '/assets/images/people/simon-hero-portrait-hero-900.webp' | relative_url }} 900w,
+              {{ '/assets/images/people/simon-hero-portrait-hero-1400.webp' | relative_url }} 1400w,
+              {{ '/assets/images/people/simon-hero-portrait-hero.webp' | relative_url }} 1694w
+            "
+            sizes="(max-width: 860px) 88vw, (max-width: 1280px) 48vw, 52vw"
+          >
+          <img
+            src="{{ '/assets/images/people/simon-hero-portrait-hero.png' | relative_url }}"
+            alt="Simon Kröner"
+            width="1694"
+            height="2109"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+          >
+        </picture>
       </div>
     </div>
   </div>

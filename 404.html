@@ -7,15 +7,38 @@ noindex: true
 ---
 
 <section class="hero-section not-found-page">
-  <div class="shell not-found-page__inner">
-    <p class="section-label section-label--hero"><span class="status-dot" aria-hidden="true"></span>404 · Falsche Abzweigung</p>
-    <h1>Diese Seite ist nicht mehr hier.</h1>
-    <p class="hero-section__subtitle">Passiert den Besten. Der Link ist veraltet, falsch oder die Seite wurde verschoben.</p>
-    <p class="hero-section__support">Am schnellsten kommst du über die Startseite, meine Projekte oder direkt zur Projektanfrage zurück zum richtigen Einstieg.</p>
-    <div class="hero-section__actions not-found-page__actions">
-      <a class="button button--primary" href="{{ '/' | relative_url }}">Zur Startseite</a>
-      <a class="button button--secondary" href="{{ '/projekte/' | relative_url }}">Projekte ansehen</a>
+  <div class="shell not-found-page__grid">
+    <div class="not-found-page__inner">
+      <p class="section-label section-label--hero"><span class="status-dot" aria-hidden="true"></span>404 · Falsche Abzweigung</p>
+      <h1>Diese Seite ist nicht mehr hier.</h1>
+      <p class="hero-section__subtitle">Passiert den Besten. Der Link ist veraltet, falsch oder die Seite wurde verschoben.</p>
+      <p class="hero-section__support">Am schnellsten kommst du über die Startseite, meine Projekte oder direkt zur Projektanfrage zurück zum richtigen Einstieg.</p>
+      <div class="hero-section__actions not-found-page__actions">
+        <a class="button button--primary" href="{{ '/' | relative_url }}">Zur Startseite</a>
+        <a class="button button--secondary" href="{{ '/projekte/' | relative_url }}">Projekte ansehen</a>
+      </div>
+      <p class="not-found-page__note">Oder direkt <a href="{{ '/kontakt/' | relative_url }}">Projekt anfragen</a>.</p>
     </div>
-    <p class="not-found-page__note">Oder direkt <a href="{{ '/kontakt/' | relative_url }}">Projekt anfragen</a>.</p>
+
+    <aside class="not-found-page__panel" aria-label="Schnelle Wege">
+      <div class="not-found-page__code" aria-hidden="true">404</div>
+      <div class="not-found-page__panel-copy">
+        <p class="not-found-page__eyebrow">Schnelle Wege zurück</p>
+        <div class="not-found-page__links">
+          <a class="not-found-page__link-card" href="{{ '/' | relative_url }}">
+            <strong>Startseite</strong>
+            <span>Zurück zum Überblick und direkt zu den wichtigsten Einstiegen.</span>
+          </a>
+          <a class="not-found-page__link-card" href="{{ '/leistungen/' | relative_url }}">
+            <strong>Leistungen</strong>
+            <span>Wenn du wissen willst, wie Simon Webdesign, Branding und Performance verbindet.</span>
+          </a>
+          <a class="not-found-page__link-card" href="{{ '/kontakt/' | relative_url }}">
+            <strong>Kontakt</strong>
+            <span>Direkt anfragen, statt weiter im falschen Pfad zu landen.</span>
+          </a>
+        </div>
+      </div>
+    </aside>
   </div>
 </section>
