@@ -38,6 +38,7 @@
   --color-violet: #7c3aed;
   --color-violet-hover: #5b21b6;
   --color-violet-deep: #1a0533;
+  --color-success: #22c55e;
   --color-cream: #f8f6f2;
   --color-white: #ffffff;
   --color-ink: #12100e;
@@ -265,8 +266,8 @@ button {
 }
 
 .section-label--dark {
-  border-color: rgba(124, 58, 237, 0.24);
-  background: rgba(124, 58, 237, 0.14);
+  border-color: rgba(124, 58, 237, 0.3);
+  background: rgba(124, 58, 237, 0.09);
   color: var(--color-violet);
 }
 
@@ -695,7 +696,7 @@ p {
 
 .check-list .inline-icon--check {
   margin-top: 0.12rem;
-  color: var(--color-violet);
+  color: var(--color-success);
 }
 
 .audit-card {
@@ -2245,9 +2246,9 @@ p {
 
 .site-footer__main {
   display: grid;
-  grid-template-columns: minmax(0, 1.72fr) minmax(200px, 0.28fr);
+  grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.44fr);
   align-items: start;
-  gap: clamp(28px, 4.5vw, 72px);
+  gap: clamp(28px, 4.5vw, 60px);
   padding: clamp(52px, 7vw, 92px) 0 clamp(28px, 4vw, 40px);
 }
 
@@ -3018,6 +3019,11 @@ p {
   .portfolio-page__hero .hero-section__copy {
     gap: 1.4rem;
   }
+
+  .site-check-form__actions .button {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3243,11 +3249,12 @@ p {
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 0.9;
-  opacity: 0.18;
+  opacity: 0.22;
 }
 
 .signature-band__card h3 {
   margin-top: 0.3rem;
+  color: var(--color-violet);
 }
 
 .signature-band__card > p:not(.signature-band__number) {
@@ -3602,7 +3609,7 @@ p {
 
 .audit-block__copy {
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
   max-width: 740px;
 }
 
@@ -3634,7 +3641,7 @@ p {
 
 .about-solo__copy {
   display: grid;
-  gap: var(--space-sm);
+  gap: var(--space-md);
   max-width: 650px;
   align-content: center;
 }
@@ -3655,7 +3662,9 @@ p {
 .about-solo__note a,
 .bio-section__note a {
   color: var(--color-violet);
-  text-decoration-color: rgba(124, 58, 237, 0.28);
+  text-decoration: underline;
+  text-decoration-color: rgba(124, 58, 237, 0.32);
+  text-underline-offset: 0.18em;
 }
 
 .about-solo__note a:hover,
