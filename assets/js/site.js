@@ -54,8 +54,6 @@
 
   function initRevealAnimations() {
     var groups = [
-      { selector: ".simon-hero__copy > *", step: 75 },
-      { selector: ".simon-hero__visual", step: 0 },
       { selector: ".bio-section__intro > *", step: 45 },
       { selector: ".bio-section__body > *", step: 50 },
       { selector: ".bio-section__media", step: 0 },
@@ -158,6 +156,60 @@
 
       observer.observe(target);
     });
+  }
+
+  function initHeroFade() {
+    var hero = document.querySelector("[data-hero-fade]");
+
+    if (!hero) {
+      return;
+    }
+
+    if (prefersReducedMotion) {
+      hero.style.setProperty("--hero-fade-progress", "0");
+      hero.style.setProperty("--hero-copy-progress", "0");
+      hero.style.setProperty("--hero-portrait-progress", "0");
+      return;
+    }
+
+    var ticking = false;
+
+    function clamp(value, min, max) {
+      return Math.min(Math.max(value, min), max);
+    }
+
+    function updateHeroFade() {
+      var heroRect = hero.getBoundingClientRect();
+      var scrollDepth = Math.max(0, -heroRect.top);
+      var isMobile = window.innerWidth <= 860;
+      var fadeDistance = Math.min(
+        hero.offsetHeight * (isMobile ? 0.58 : 0.68),
+        window.innerHeight * (isMobile ? 0.64 : 0.78)
+      );
+      var progress = fadeDistance > 0 ? clamp(scrollDepth / fadeDistance, 0, 1) : 0;
+      var copyProgress = clamp(progress * (isMobile ? 1.28 : 1.18), 0, 1);
+      var portraitProgress = clamp(progress * (isMobile ? 1.12 : 1.08), 0, 1);
+
+      hero.style.setProperty("--hero-fade-progress", progress.toFixed(4));
+      hero.style.setProperty("--hero-copy-progress", copyProgress.toFixed(4));
+      hero.style.setProperty("--hero-portrait-progress", portraitProgress.toFixed(4));
+
+      ticking = false;
+    }
+
+    function requestUpdate() {
+      if (ticking) {
+        return;
+      }
+
+      ticking = true;
+      window.requestAnimationFrame(updateHeroFade);
+    }
+
+    updateHeroFade();
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+    window.addEventListener("orientationchange", requestUpdate);
   }
 
   function initNav() {
@@ -1245,6 +1297,7 @@
     initCurrentLinks();
     initSectionLabels();
     initRevealAnimations();
+    initHeroFade();
     initHeaderScroll();
     initNav();
     initCountUp();

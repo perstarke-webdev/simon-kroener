@@ -10,9 +10,9 @@ classes:
 {% assign home = site.data.homepage %}
 {% assign featured_projects = site.data.projects | where: "featured", true %}
 
-<section class="simon-hero">
+<section class="simon-hero" data-hero-fade>
   <div class="shell simon-hero__inner">
-    <div class="simon-hero__copy">
+    <div class="simon-hero__copy" data-hero-fade-copy>
       <p class="availability-pill"><span aria-hidden="true"></span>Verfügbar für neue Projekte</p>
       <p class="simon-hero__eyebrow">Webdesign · Branding · Performance</p>
       <h1>
@@ -26,8 +26,8 @@ classes:
       </div>
     </div>
 
-    <div class="simon-hero__visual">
-      <div class="simon-hero__portrait">
+    <div class="simon-hero__visual" data-hero-fade-visual>
+      <div class="simon-hero__portrait" data-hero-fade-portrait>
         <img
           src="{{ '/assets/images/people/simon-hero-portrait-hero.png' | relative_url }}"
           alt="Simon Kröner"

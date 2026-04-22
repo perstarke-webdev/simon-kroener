@@ -3022,6 +3022,9 @@ p {
 /* Second pass: stronger Simon-specific homepage and copy layout overrides */
 
 .simon-hero {
+  --hero-fade-progress: 0;
+  --hero-copy-progress: 0;
+  --hero-portrait-progress: 0;
   min-height: 100vh;
   padding: clamp(110px, 9vw, 138px) 0 0;
   background:
@@ -3059,6 +3062,14 @@ p {
   max-width: min(52%, 670px);
   padding-top: clamp(118px, 10vw, 162px);
   gap: 1rem;
+  opacity: calc(1 - (var(--hero-copy-progress) * 1.06));
+  transform: translate3d(
+    0,
+    calc(var(--hero-copy-progress) * -30px),
+    0
+  );
+  transform-origin: left top;
+  will-change: transform, opacity;
 }
 
 .simon-hero__eyebrow {
@@ -3088,6 +3099,15 @@ p {
   width: clamp(470px, 46vw, 660px);
   aspect-ratio: 1694 / 2109;
   min-height: 0;
+  opacity: calc(1 - (var(--hero-portrait-progress) * 0.66));
+  transform: translate3d(
+      0,
+      calc(var(--hero-portrait-progress) * -14px),
+      0
+    )
+    scale(calc(1 + (var(--hero-portrait-progress) * 0.16)));
+  transform-origin: center bottom;
+  will-change: transform, opacity;
 }
 
 .simon-hero__portrait {
@@ -3106,7 +3126,21 @@ p {
 }
 
 .simon-hero__portrait::after {
-  content: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(24, 4, 41, calc(var(--hero-portrait-progress) * 1.08)) 0%,
+      rgba(24, 4, 41, calc(var(--hero-portrait-progress) * 0.82)) 12%,
+      rgba(24, 4, 41, calc(var(--hero-portrait-progress) * 0.24)) 28%,
+      rgba(24, 4, 41, 0) 43%
+    );
+  pointer-events: none;
+  mix-blend-mode: normal;
+  opacity: clamp(0, calc(var(--hero-portrait-progress) * 1.04), 1);
+  will-change: opacity;
 }
 
 .simon-hero__portrait img {
@@ -3120,6 +3154,7 @@ p {
   filter: saturate(0.96) brightness(0.985);
   transform: scaleX(-1);
   transform-origin: center bottom;
+  will-change: transform, opacity;
 }
 
 .signature-band__intro {
@@ -3656,6 +3691,11 @@ p {
   .simon-hero__copy {
     max-width: none;
     padding-top: 0;
+    transform: translate3d(
+      0,
+      calc(var(--hero-copy-progress) * -24px),
+      0
+    );
   }
 
   .simon-hero__visual {
@@ -3667,19 +3707,16 @@ p {
     min-height: 0;
     margin-top: clamp(8px, 3vw, 20px);
     margin-inline: auto;
+    transform: translate3d(
+        0,
+        calc(var(--hero-portrait-progress) * -8px),
+        0
+      )
+      scale(calc(1 + (var(--hero-portrait-progress) * 0.13)));
   }
 
   .simon-hero__portrait {
     transform: translateY(0);
-  }
-
-  .simon-hero__portrait::before {
-    inset: auto -4% 0 -4%;
-    height: 38%;
-    background:
-      radial-gradient(48% 80% at 12% 18%, rgba(24, 4, 41, 0.82) 0%, rgba(24, 4, 41, 0.58) 34%, rgba(24, 4, 41, 0) 76%),
-      radial-gradient(48% 80% at 88% 18%, rgba(24, 4, 41, 0.82) 0%, rgba(24, 4, 41, 0.58) 34%, rgba(24, 4, 41, 0) 76%);
-    filter: blur(14px);
   }
 
   .signature-band__card,
@@ -3705,9 +3742,6 @@ p {
     grid-template-columns: 1fr;
     gap: var(--space-sm);
   }
-}
-
-@media (min-width: 861px) and (max-width: 1180px) {
 }
 
 @media (max-width: 640px) {
