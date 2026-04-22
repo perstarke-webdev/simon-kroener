@@ -12,7 +12,7 @@ classes:
     <div class="hero-section__copy about-page__hero-copy about-page__hero-copy--editorial">
       <p class="section-label section-label--hero"><span class="status-dot" aria-hidden="true"></span>Simon Kröner</p>
       <h1>Gestaltung mit Haltung.</h1>
-      <p class="hero-section__subtitle">Ich entwickle digitale Auftritte, die ruhig, präzise und eigenständig wirken. Nicht als dekorative Oberfläche, sondern als klare Übersetzung von Marke und Qualität.</p>
+      <p class="hero-section__subtitle">Ich entwickle digitale Auftritte, die prägnant, präzise und hochwertig wirken. Nicht als dekorative Oberfläche, sondern als klare Übersetzung von Marke und Qualität.</p>
       <div class="about-page__hero-notes">
         <span>Webdesign</span>
         <span>Branding</span>
@@ -51,6 +51,7 @@ classes:
         <p>Ich arbeite an der Schnittstelle von Gestaltung, Markenbild und digitaler Präsenz. Genau dort entscheidet sich oft, ob ein Unternehmen online stark wirkt oder austauschbar bleibt.</p>
         <p>Mich interessiert keine Oberfläche um ihrer selbst willen. Mich interessiert Präzision: klare Typografie, ein stimmiger Ton, nachvollziehbare Dramaturgie und eine Website, die in jeder Größe sauber funktioniert.</p>
         <p>Diese Haltung zieht sich durch jedes Projekt, unabhängig davon, ob es um einen Relaunch, ein Branding oder einen komplett neuen Auftritt geht.</p>
+        <p class="bio-section__note">Je nach Projekt erfolgt die Umsetzung über <a href="https://kroener-starke.ch/" target="_blank" rel="noopener noreferrer">Kröner &amp; Starke Web Development</a> gemeinsam mit meinem Businesspartner Per Starke.</p>
       </div>
     </div>
 

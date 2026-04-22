@@ -1,12 +1,12 @@
 pain:
   title: "Wie stark wirkt deine Website heute wirklich?"
-  intro: "Im kostenlosen Website-Check zeige ich dir, wo dein Auftritt an Klarheit, Wiedererkennung oder technischer Qualität verliert – und wo du gezielt ansetzen kannst."
+  intro: "Im kostenlosen Website-Check zeige ich dir, wo dein Auftritt bei Klarheit, Wiedererkennung oder technischer Qualität Potenzial liegen lässt – und wo du gezielt nachschärfen kannst."
   audit_title: "Kostenloser Website-Check"
   audit_text: "Schick mir deine Domain und ich melde mich mit einer ehrlichen ersten Einschätzung zu Wirkung, Struktur und Performance."
   bullet_points:
     - "klarere visuelle Hierarchie"
     - "stimmigeres Branding und bessere Wiedererkennung"
-    - "sauberere Struktur und schnellere Nutzerführung"
+    - "klarere Seitenstruktur und direktere nächste Schritte"
   form:
     domain_label: "Deine Domain"
     domain_placeholder: "beispiel.ch"

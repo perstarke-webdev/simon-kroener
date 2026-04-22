@@ -21,7 +21,6 @@ classes:
       <p class="contact-page__hero-card-label">Direkter Kontakt</p>
       <a class="site-footer__link" href="mailto:{{ legal.simon.email }}">{{ legal.simon.email }}</a>
       <a class="site-footer__link" href="tel:{{ site.contact.phone | replace: ' ', '' }}">{{ site.contact.phone }}</a>
-      <p>Ich melde mich persönlich mit einer ehrlichen ersten Einschätzung zurück.</p>
     </aside>
   </div>
 </section>

@@ -1,66 +1,68 @@
 {% assign legal = site.data.legal %}
 <div class="site-footer">
-  <div class="shell site-footer__topbar">
-    <p class="site-footer__prompt">Bereit für Klarheit, Charakter und Substanz?</p>
-    <a class="button button--ghost button--small" href="{{ '/kontakt/' | relative_url }}">Projekt anfragen</a>
-  </div>
-
   <div class="shell site-footer__main">
-    <div class="site-footer__column">
+    <div class="site-footer__editorial">
       <p class="site-footer__brand">{{ site.title }}</p>
-      <p>{{ site.branding.claim }}</p>
-      <p>Webdesign, Branding und Performance für Unternehmen, die online nicht austauschbar wirken wollen.</p>
+      <p class="site-footer__statement">{{ site.branding.claim }}</p>
+      <div class="site-footer__actions">
+        <a class="button button--primary button--small" href="{{ '/kontakt/' | relative_url }}">Projekt anfragen</a>
+        <a class="button button--ghost button--small" href="{{ '/#website-check' | relative_url }}">Website-Check</a>
+      </div>
     </div>
 
-    <div class="site-footer__column">
-      <h3>Navigation</h3>
-      <ul class="site-footer__list">
-        {% for link in site.data.navigation.footer %}
-          <li>
-            <a
-              class="site-footer__link{% if link.url == '/' %}{% if page.url == '/' or page.url == '/index.html' %} is-current{% endif %}{% elsif page.url contains link.url %} is-current{% endif %}"
-              href="{{ link.url | relative_url }}"
-              {% if link.url == '/' %}{% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}{% elsif page.url contains link.url %}aria-current="page"{% endif %}
-            >
-              {{ link.title }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
+    <div class="site-footer__rail">
+      <div class="site-footer__group">
+        <p class="site-footer__meta-label">Direktkontakt</p>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="mailto:{{ legal.simon.email }}">{{ legal.simon.email }}</a></li>
+          <li><a class="site-footer__link" href="tel:{{ site.contact.phone | replace: ' ', '' }}">{{ site.contact.phone }}</a></li>
+          <li><a class="site-footer__link" href="{{ legal.simon.website }}" target="_blank" rel="noopener noreferrer">{{ legal.simon.website | replace: 'https://', '' }}</a></li>
+        </ul>
+      </div>
 
-    <div class="site-footer__column">
-      <h3>Kontakt</h3>
-      <ul class="site-footer__list">
-        <li>{{ site.title }}</li>
-        <li><a class="site-footer__link" href="mailto:{{ legal.simon.email }}">{{ legal.simon.email }}</a></li>
-        <li><a class="site-footer__link" href="tel:{{ site.contact.phone | replace: ' ', '' }}">{{ site.contact.phone }}</a></li>
-        <li><a class="site-footer__link" href="{{ legal.simon.website }}" target="_blank" rel="noopener noreferrer">{{ legal.simon.website | replace: 'https://', '' }}</a></li>
-      </ul>
-    </div>
-
-    <div class="site-footer__column site-footer__column--legal">
-      <h3>Rechtliches</h3>
-      <ul class="site-footer__list site-footer__list--compact">
-        {% for link in site.data.navigation.legal %}
-          <li>
-            <a
-              class="site-footer__link{% if link.url == '/' %}{% if page.url == '/' or page.url == '/index.html' %} is-current{% endif %}{% elsif page.url contains link.url %} is-current{% endif %}"
-              href="{{ link.url | relative_url }}"
-              {% if link.url == '/' %}{% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}{% elsif page.url contains link.url %}aria-current="page"{% endif %}
-            >
-              {{ link.title }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
+      <div class="site-footer__group">
+        <p class="site-footer__meta-label">Rechtliches</p>
+        <ul class="site-footer__list site-footer__list--compact">
+          {% for link in site.data.navigation.legal %}
+            <li>
+              <a
+                class="site-footer__link{% if link.url == '/' %}{% if page.url == '/' or page.url == '/index.html' %} is-current{% endif %}{% elsif page.url contains link.url %} is-current{% endif %}"
+                href="{{ link.url | relative_url }}"
+                {% if link.url == '/' %}{% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}{% elsif page.url contains link.url %}aria-current="page"{% endif %}
+              >
+                {{ link.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
     </div>
   </div>
 
   <div class="shell site-footer__bottom">
-    <p>© {{ site.title }}, 2026.</p>
-    <a class="site-footer__badge" href="{{ site.branding.collaboration.kswd_url }}" target="_blank" rel="noopener noreferrer">
-      <span class="site-footer__badge-core">Made by KSWD</span>
-    </a>
+    <nav class="site-footer__bottom-nav" aria-label="Footer-Navigation">
+      <ul class="site-footer__list">
+        {% for link in site.data.navigation.footer %}
+          {% unless link.url == '/' %}
+          <li>
+            <a
+              class="site-footer__link{% if link.url == '/' %}{% if page.url == '/' or page.url == '/index.html' %} is-current{% endif %}{% elsif page.url contains link.url %} is-current{% endif %}"
+              href="{{ link.url | relative_url }}"
+              {% if link.url == '/' %}{% if page.url == '/' or page.url == '/index.html' %}aria-current="page"{% endif %}{% elsif page.url contains link.url %}aria-current="page"{% endif %}
+            >
+              {{ link.title }}
+            </a>
+          </li>
+          {% endunless %}
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <div class="site-footer__bottom-meta">
+      <p>© {{ site.title }}, 2026.</p>
+      <a class="site-footer__badge" href="{{ site.branding.collaboration.kswd_url }}" target="_blank" rel="noopener noreferrer">
+        <span class="site-footer__badge-core">Made by KSWD</span>
+      </a>
+    </div>
   </div>
 </div>

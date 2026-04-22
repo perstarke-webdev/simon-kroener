@@ -47,14 +47,14 @@ classes:
     <div class="signature-band__intro">
       <p class="section-label section-label--dark"><span class="status-dot" aria-hidden="true"></span>Ausrichtung</p>
       <h2>Drei Disziplinen. Eine Haltung.</h2>
-      <p class="section-lead">Ich entwickle digitale Auftritte, die eigenständig aussehen, klar führen und technisch sauber funktionieren. Keine losen Einzelleistungen, sondern eine stimmige Gesamtwirkung.</p>
+      <p class="section-lead">Ich entwickle digitale Auftritte, die hängen bleiben, klar durch Angebot und Inhalte führen und technisch sauber funktionieren. Keine losen Einzelleistungen, sondern eine stimmige Gesamtwirkung.</p>
     </div>
 
     <div class="signature-band__grid">
       <article class="signature-band__card">
         <p class="signature-band__number">01</p>
         <h3>Webdesign</h3>
-        <p>Layouts mit klarer Hierarchie, starken Kontrasten und einer Führung, die sofort verständlich ist.</p>
+        <p>Layouts mit klarer Hierarchie, starken Kontrasten und einer Nutzerführung, die Inhalte und nächste Schritte sofort verständlich macht.</p>
       </article>
       <article class="signature-band__card">
         <p class="signature-band__number">02</p>
@@ -122,6 +122,49 @@ classes:
               {% endif %}
             </div>
           </article>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="project-gallery__mobile-scenes" aria-label="Ausgewählte Projekte">
+      <div class="project-gallery__mobile-stage">
+        {% for project in featured_projects limit: 4 %}
+          <article class="project-gallery__scene{% if forloop.first %} is-active{% endif %}" data-gallery-scene="{{ forloop.index0 }}">
+            <div class="project-gallery__scene-media">
+              <img
+                src="{{ project.cover | relative_url }}"
+                alt="{{ project.cover_alt | default: project.name }}"
+                loading="lazy"
+                {% if project.width %}width="{{ project.width }}"{% endif %}
+                {% if project.height %}height="{{ project.height }}"{% endif %}
+              >
+            </div>
+
+            <div class="project-gallery__scene-card">
+              <p class="project-gallery__index">0{{ forloop.index }}</p>
+              <h3>{{ project.name }}</h3>
+              <p>{{ project.summary }}</p>
+              <ul class="project-gallery__tags">
+                <li>{{ project.industry | first }}</li>
+                <li>{{ project.types | first }}</li>
+              </ul>
+              <div class="project-gallery__actions">
+                <button class="button button--secondary button--small" type="button" data-dialog-target="home-project-{{ project.slug }}">Galerie öffnen</button>
+                {% if project.website_url %}
+                  <a class="project-card__external" href="{{ project.website_url }}" target="_blank" rel="noopener noreferrer">
+                    Website ansehen
+                    <span class="inline-icon inline-icon--external" aria-hidden="true">&#8599;</span>
+                  </a>
+                {% endif %}
+              </div>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+
+      <div class="project-gallery__mobile-track" aria-hidden="true">
+        {% for project in featured_projects limit: 4 %}
+          <div class="project-gallery__scene-step" data-gallery-scene-step="{{ forloop.index0 }}"></div>
         {% endfor %}
       </div>
     </div>
@@ -208,21 +251,13 @@ classes:
     <div class="about-solo__copy">
       <p class="section-label section-label--dark"><span class="status-dot" aria-hidden="true"></span>Über mich</p>
       <h2>Gestaltung mit Blick auf Wirkung.</h2>
-      <p class="section-lead">Mich interessiert nicht nur, ob eine Seite modern aussieht. Mich interessiert, ob sie Haltung zeigt, Vertrauen ausstrahlt und in jeder Ansicht ruhig und präzise wirkt.</p>
+      <p class="section-lead">Mich interessiert nicht nur, ob eine Seite modern aussieht. Mich interessiert, ob sie Haltung zeigt, Vertrauen ausstrahlt und Besuchern in jeder Ansicht sofort Orientierung gibt.</p>
       <div class="about-solo__points">
         <p>Mein Hintergrund liegt in Design, Branding und der Frage, wie Marken digital wahrgenommen werden.</p>
         <p>Deshalb entstehen keine dekorativen Oberflächen, sondern Auftritte mit Charakter, Klarheit und technischer Substanz.</p>
+        <p class="about-solo__note">Je nach Projekt erfolgt die Umsetzung über <a href="https://kroener-starke.ch/" target="_blank" rel="noopener noreferrer">Kröner &amp; Starke Web Development</a> gemeinsam mit meinem Businesspartner Per Starke.</p>
       </div>
       <a class="button button--secondary" href="{{ '/ueber-mich/' | relative_url }}">Mehr über mich</a>
-    </div>
-  </div>
-</section>
-
-<section class="section section--cream studio-note" id="kswd">
-  <div class="shell">
-    <div class="studio-note__card">
-      <p class="section-label section-label--dark"><span class="status-dot" aria-hidden="true"></span>Hinweis</p>
-      <p>Diese Seite zeigt bewusst meine eigene Handschrift. Wenn ein Projekt zusätzliche Umsetzungskapazität oder ein erweitertes Setup braucht, arbeite ich bei Bedarf gemeinsam mit <a href="https://kroener-starke.ch/" target="_blank" rel="noopener noreferrer">Kröner &amp; Starke Web Development</a>.</p>
     </div>
   </div>
 </section>

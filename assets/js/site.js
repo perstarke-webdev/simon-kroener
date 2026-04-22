@@ -98,13 +98,10 @@
       { selector: "#stimmen .section-heading > *", step: 55 },
       { selector: "#stimmen .testimonial-carousel", step: 0 },
       { selector: "#framework .framework-card > *", step: 70 },
-      { selector: "#kswd .section-copy > *", step: 55 },
-      { selector: "#kswd .partnership-section__visual", step: 0 },
       { selector: "#ueber-mich .section-copy > *", step: 55 },
       { selector: "#ueber-mich .person-card", step: 75 },
       { selector: "#ueber-mich .about-solo__copy > *", step: 55 },
       { selector: "#ueber-mich .about-solo__media", step: 0 },
-      { selector: "#kswd .studio-note__card > *", step: 55 },
       { selector: "#cta .section-copy > *", step: 55 },
       { selector: "#cta .audit-card > *", step: 55 },
       { selector: ".site-footer__topbar > *", step: 40 },
@@ -402,7 +399,6 @@
 
   function initProjectGallery() {
     var galleries = document.querySelectorAll("[data-project-gallery]");
-    var ticking = false;
 
     if (!galleries.length) {
       return;
@@ -411,9 +407,12 @@
     galleries.forEach(function (gallery) {
       var steps = gallery.querySelectorAll("[data-gallery-step]");
       var previews = gallery.querySelectorAll("[data-gallery-preview]");
+      var scenes = gallery.querySelectorAll("[data-gallery-scene]");
+      var sceneSteps = gallery.querySelectorAll("[data-gallery-scene-step]");
       var previewFrame = gallery.querySelector(".project-gallery__preview-frame");
+      var ticking = false;
 
-      if (!steps.length || !previews.length) {
+      if ((!steps.length || !previews.length) && !scenes.length) {
         return;
       }
 
@@ -425,26 +424,45 @@
         previews.forEach(function (preview, previewIndex) {
           preview.classList.toggle("is-active", previewIndex === index);
         });
+
+        scenes.forEach(function (scene, sceneIndex) {
+          scene.classList.toggle("is-active", sceneIndex === index);
+        });
+      }
+
+      function syncTailSpace() {
+        var lastStep = steps[steps.length - 1];
+        var previewHeight;
+        var breathingRoom;
+        var tailSpace;
+
+        if (!previewFrame || !lastStep || window.innerWidth <= 860) {
+          gallery.style.setProperty("--project-gallery-tail-space", "0px");
+          return;
+        }
+
+        previewHeight = previewFrame.offsetHeight;
+        breathingRoom = -Math.min(160, window.innerHeight * 0.14);
+        tailSpace = Math.max(
+          0,
+          previewHeight - lastStep.offsetHeight + breathingRoom
+        );
+
+        gallery.style.setProperty(
+          "--project-gallery-tail-space",
+          Math.round(tailSpace) + "px"
+        );
       }
 
       setActive(0);
 
-      if (prefersReducedMotion) {
-        return;
-      }
-
-      function updateGallery() {
+      function updateDesktopGallery() {
         var viewportAnchor = window.innerHeight * 0.4;
         var galleryRect = gallery.getBoundingClientRect();
-        var previewRect = previewFrame
-          ? previewFrame.getBoundingClientRect()
-          : { bottom: window.innerHeight };
         var activeIndex = 0;
-        var lastIndex = steps.length - 1;
 
         if (galleryRect.top > viewportAnchor) {
           setActive(0);
-          ticking = false;
           return;
         }
 
@@ -455,13 +473,37 @@
           }
         });
 
-        if (
-          galleryRect.bottom <= previewRect.bottom + window.innerHeight * 0.1
-        ) {
-          activeIndex = lastIndex;
+        setActive(activeIndex);
+      }
+
+      function updateMobileGallery() {
+        var viewportCenter = window.innerHeight * 0.44;
+        var closestIndex = 0;
+        var closestDistance = Number.POSITIVE_INFINITY;
+
+        sceneSteps.forEach(function (step, index) {
+          var rect = step.getBoundingClientRect();
+          var stepCenter = rect.top + rect.height / 2;
+          var distance = Math.abs(stepCenter - viewportCenter);
+
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestIndex = index;
+          }
+        });
+
+        setActive(closestIndex);
+      }
+
+      function updateGallery() {
+        syncTailSpace();
+
+        if (window.innerWidth <= 860 && scenes.length && sceneSteps.length) {
+          updateMobileGallery();
+        } else if (steps.length && previews.length) {
+          updateDesktopGallery();
         }
 
-        setActive(activeIndex);
         ticking = false;
       }
 

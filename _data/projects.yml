@@ -23,7 +23,7 @@
   gallery:
     - src: "/assets/images/projects/elevate-duesseldorf-1.webp"
       alt: "ELEVATE Düsseldorf neuer Website- und Markenauftritt"
-      caption: "Der neue Auftritt verbindet Performance, Premium-Anspruch und klare Nutzerführung in einer deutlich stärkeren Markenwelt."
+      caption: "Der neue Auftritt verbindet Performance, Premium-Anspruch und klare Wege zu Angebot und Anfrage in einer deutlich stärkeren Markenwelt."
       width: 3386
       height: 1930
     - src: "/assets/images/projects/elevate-duesseldorf-2.webp"
@@ -100,7 +100,7 @@
   gallery:
     - src: "/assets/images/projects/cafe-rotkehlchen-1.webp"
       alt: "Café Rotkehlchen Startseite"
-      caption: "Die Website verbindet Markencharakter mit klarer Führung in Richtung Shop und Bestellung."
+      caption: "Die Website verbindet Markencharakter mit klaren Wegen zu Shop und Bestellung."
       width: 3420
       height: 1976
     - src: "/assets/images/projects/cafe-rotkehlchen-2.webp"
@@ -301,7 +301,7 @@
       height: 1968
     - src: "/assets/images/projects/neurotidal-3.webp"
       alt: "NeuroTidal weitere Ansicht"
-      caption: "Die Seite wirkt eigenständig und immersiv, ohne in Unklarheit oder visuelle Unruhe zu kippen."
+      caption: "Die Seite wirkt markant und immersiv, ohne in Unklarheit oder visuelle Unruhe zu kippen."
       width: 3420
       height: 1968
 
@@ -318,7 +318,7 @@
   tags:
     - "Non-Profit"
     - "Guter Zweck (Pro Bono)"
-  summary: "Sensibler Auftritt, der Haltung, Transparenz und Unterstützung in eine klare Nutzerführung übersetzt."
+  summary: "Sensibler Auftritt, der Haltung, Transparenz und Unterstützung in klare Wege zu Information und Hilfe übersetzt."
   result: ""
   website_url: "https://aynur-stiftung.de/"
   cover: "/assets/images/projects/aynur-by-mati-1.webp"

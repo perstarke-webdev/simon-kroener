@@ -74,7 +74,7 @@ classes:
         <div class="services-page__system-copy">
           <p>Ich verbinde modernes Webdesign mit einer klaren Markenperspektive und einer sauberen technischen Basis.</p>
           <p>So wirkt ein Auftritt nicht nur an der Oberfläche stark, sondern trägt seine Qualität durch jede Seite, jeden Breakpoint und jede Interaktion.</p>
-          <p>Das Ergebnis ist eine Website, die eigenständig aussieht und sich ruhig, schnell und hochwertig anfühlt.</p>
+          <p>Das Ergebnis ist eine Website, die markant aussieht und sich klar, schnell und hochwertig anfühlt.</p>
         </div>
       </article>
 
@@ -110,7 +110,7 @@ classes:
       <article class="process-card" id="service-step-03">
         <p class="process-card__number">03</p>
         <h3>Branding</h3>
-        <p>Farben, Ton, Typografie und Bildwelt werden so ausgerichtet, dass ein wiedererkennbarer und eigenständiger Eindruck entsteht.</p>
+        <p>Farben, Ton, Typografie und Bildwelt werden so ausgerichtet, dass ein wiedererkennbarer und unverwechselbarer Eindruck entsteht.</p>
       </article>
 
       <article class="process-card" id="service-step-04">
@@ -142,7 +142,7 @@ classes:
     </div>
 
     <div class="services-page__outcomes-card">
-      <p class="section-kicker">Das Ergebnis:</p>
+      <p class="section-kicker">Das Ergebnis ist ein Auftritt, der</p>
       <ul class="check-list">
         <li>
           <span class="inline-icon inline-icon--check" aria-hidden="true">&#10003;</span>
