@@ -3118,6 +3118,9 @@ p {
   --hero-fade-progress: 0;
   --hero-copy-progress: 0;
   --hero-portrait-progress: 0;
+  --hero-copy-shift: -30px;
+  --hero-portrait-shift: -14px;
+  --hero-portrait-scale-delta: 0.16;
   min-height: 100vh;
   padding: clamp(110px, 9vw, 138px) 0 0;
   background:
@@ -3158,7 +3161,7 @@ p {
   opacity: calc(1 - (var(--hero-copy-progress) * 1.06));
   transform: translate3d(
     0,
-    calc(var(--hero-copy-progress) * -30px),
+    calc(var(--hero-copy-progress) * var(--hero-copy-shift)),
     0
   );
   transform-origin: left top;
@@ -3196,10 +3199,10 @@ p {
   opacity: calc(1 - (var(--hero-portrait-progress) * 0.66));
   transform: translate3d(
       0,
-      calc(var(--hero-portrait-progress) * -14px),
+      calc(var(--hero-portrait-progress) * var(--hero-portrait-shift)),
       0
     )
-    scale(calc(1 + (var(--hero-portrait-progress) * 0.16)));
+    scale(calc(1 + (var(--hero-portrait-progress) * var(--hero-portrait-scale-delta))));
   transform-origin: center bottom;
   will-change: transform, opacity;
   backface-visibility: hidden;
@@ -3357,14 +3360,15 @@ p {
 
 .project-gallery__intro .section-lead {
   grid-column: 2;
-  grid-row: 1 / span 2;
+  grid-row: 1;
   max-width: 46ch;
 }
 
 .project-gallery__intro > .button {
   grid-column: 2;
   grid-row: 2;
-  align-self: end;
+  justify-self: start;
+  align-self: start;
   margin-top: 0.4rem;
 }
 
@@ -3547,6 +3551,19 @@ p {
   margin-top: 0.15rem;
 }
 
+.project-gallery__actions .button--secondary {
+  color: rgba(236, 228, 255, 0.98);
+  border-color: rgba(152, 111, 255, 0.34);
+  background: rgba(124, 58, 237, 0.16);
+}
+
+.project-gallery__actions .button--secondary:hover,
+.project-gallery__actions .button--secondary:focus-visible {
+  color: var(--color-white);
+  border-color: rgba(180, 149, 255, 0.58);
+  background: rgba(124, 58, 237, 0.26);
+}
+
 .project-gallery__actions .project-card__external {
   color: rgba(255, 255, 255, 0.92);
 }
@@ -3556,6 +3573,7 @@ p {
   --project-gallery-mobile-stage-top: calc(50dvh - var(--project-gallery-mobile-stage-height) / 2);
   --project-gallery-mobile-scene-gap: clamp(26px, 4vh, 44px);
   --project-gallery-mobile-scene-pad-top: clamp(20px, 3.4vh, 36px);
+  --project-gallery-mobile-card-min-height: 0px;
   --project-gallery-mobile-step-height: 40dvh;
   --project-gallery-mobile-first-step-height: 16dvh;
   --project-gallery-mobile-first-step-offset: -16dvh;
@@ -3574,24 +3592,25 @@ p {
   position: absolute;
   inset: 0;
   display: grid;
+  grid-template-rows: auto minmax(var(--project-gallery-mobile-card-min-height), auto);
   justify-items: center;
   align-content: start;
   gap: var(--project-gallery-mobile-scene-gap);
   padding-top: var(--project-gallery-mobile-scene-pad-top);
   opacity: 0;
+  transform: translate3d(0, 18px, 0) scale(0.985);
+  transform-origin: center top;
   pointer-events: none;
   visibility: hidden;
   transition:
-    opacity 240ms cubic-bezier(0.22, 1, 0.36, 1),
-    visibility 0ms linear 240ms;
+    opacity 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0ms linear 260ms;
 }
 
 .project-gallery__scene-media,
 .project-gallery__scene-card {
   width: min(100%, 640px);
-  transition:
-    opacity 520ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 520ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .project-gallery__scene-media {
@@ -3601,8 +3620,6 @@ p {
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.04);
   box-shadow: var(--shadow-deep);
-  opacity: 0.46;
-  transform: translateY(24px) scale(0.975);
 }
 
 .project-gallery__scene-media img {
@@ -3616,34 +3633,22 @@ p {
   display: grid;
   gap: 0.95rem;
   margin-top: 0;
+  min-height: var(--project-gallery-mobile-card-min-height);
   padding: clamp(22px, 5vw, 30px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
   background: #35204d;
-  opacity: 0.56;
-  transform: translateY(28px) scale(0.975);
   position: relative;
   z-index: 1;
 }
 
 .project-gallery__scene-card > * {
-  opacity: 0.82;
-  transition: opacity 340ms ease, color 340ms ease;
+  transition: color 260ms ease;
 }
 
 .project-gallery__scene .project-gallery__index {
   color: rgba(214, 199, 255, 0.92);
   opacity: 0.38;
-}
-
-.project-gallery__scene.is-active .project-gallery__scene-media,
-.project-gallery__scene.is-active .project-gallery__scene-card {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-.project-gallery__scene.is-active .project-gallery__scene-card > * {
-  opacity: 1;
 }
 
 .project-gallery__scene.is-active .project-gallery__index {
@@ -3653,10 +3658,12 @@ p {
 
 .project-gallery__scene.is-active {
   opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
   pointer-events: auto;
   visibility: visible;
   transition:
-    opacity 240ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 260ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
     visibility 0ms linear 0ms;
 }
 
@@ -3823,14 +3830,17 @@ p {
   .simon-hero__copy {
     max-width: none;
     padding-top: 0;
+    --hero-copy-shift: -24px;
     transform: translate3d(
       0,
-      calc(var(--hero-copy-progress) * -24px),
+      calc(var(--hero-copy-progress) * var(--hero-copy-shift)),
       0
     );
   }
 
   .simon-hero__visual {
+    --hero-portrait-shift: -8px;
+    --hero-portrait-scale-delta: 0.13;
     position: relative;
     right: auto;
     bottom: auto;
@@ -3841,10 +3851,10 @@ p {
     margin-inline: auto;
     transform: translate3d(
         0,
-        calc(var(--hero-portrait-progress) * -8px),
+        calc(var(--hero-portrait-progress) * var(--hero-portrait-shift)),
         0
       )
-      scale(calc(1 + (var(--hero-portrait-progress) * 0.13)));
+      scale(calc(1 + (var(--hero-portrait-progress) * var(--hero-portrait-scale-delta))));
   }
 
   .simon-hero__portrait {
