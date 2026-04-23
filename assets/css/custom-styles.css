@@ -3783,6 +3783,18 @@ p {
   }
 
   .signature-band__intro .section-label,
+  .signature-band__intro h2,
+  .signature-band__intro .section-lead {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .signature-band__intro h2,
+  .signature-band__intro .section-lead {
+    max-width: none;
+  }
+
+  .signature-band__intro .section-label,
   .project-gallery__intro .section-label {
     margin-bottom: 0;
   }
@@ -3846,6 +3858,18 @@ p {
     border-radius: 14px;
   }
 
+  .signature-band__intro {
+    gap: var(--space-sm);
+  }
+
+  .signature-band__intro h2 {
+    max-width: 13.2ch;
+  }
+
+  .signature-band__intro .section-lead {
+    max-width: 32ch;
+  }
+
   .project-gallery {
     display: none;
   }
@@ -3861,6 +3885,18 @@ p {
   .services-page__process-heading {
     grid-template-columns: 1fr;
     gap: var(--space-sm);
+  }
+}
+
+@media (max-width: 430px) {
+  .simon-hero__actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .simon-hero__actions .button {
+    width: min(100%, 18.75rem);
   }
 }
 
