@@ -160,10 +160,19 @@
 
   function initHeroFade() {
     var hero = document.querySelector("[data-hero-fade]");
+    var heroImage;
+    var heroTop = 0;
+    var fadeDistance = 1;
+    var isMobile = false;
+    var lastProgress = -1;
+    var lastCopyProgress = -1;
+    var lastPortraitProgress = -1;
 
     if (!hero) {
       return;
     }
+
+    heroImage = hero.querySelector("img");
 
     if (prefersReducedMotion) {
       hero.style.setProperty("--hero-fade-progress", "0");
@@ -178,21 +187,40 @@
       return Math.min(Math.max(value, min), max);
     }
 
-    function updateHeroFade() {
-      var heroRect = hero.getBoundingClientRect();
-      var scrollDepth = Math.max(0, -heroRect.top);
-      var isMobile = window.innerWidth <= 860;
-      var fadeDistance = Math.min(
+    function syncHeroMetrics() {
+      isMobile = window.innerWidth <= 860;
+      heroTop = hero.offsetTop;
+      fadeDistance = Math.min(
         hero.offsetHeight * (isMobile ? 0.58 : 0.68),
         window.innerHeight * (isMobile ? 0.64 : 0.78)
       );
+      requestUpdate();
+    }
+
+    function updateHeroFade() {
+      var scrollTop = window.scrollY || window.pageYOffset || 0;
+      var scrollDepth = Math.max(0, scrollTop - heroTop);
       var progress = fadeDistance > 0 ? clamp(scrollDepth / fadeDistance, 0, 1) : 0;
       var copyProgress = clamp(progress * (isMobile ? 1.28 : 1.18), 0, 1);
       var portraitProgress = clamp(progress * (isMobile ? 1.12 : 1.08), 0, 1);
 
-      hero.style.setProperty("--hero-fade-progress", progress.toFixed(4));
-      hero.style.setProperty("--hero-copy-progress", copyProgress.toFixed(4));
-      hero.style.setProperty("--hero-portrait-progress", portraitProgress.toFixed(4));
+      if (Math.abs(progress - lastProgress) > 0.001) {
+        hero.style.setProperty("--hero-fade-progress", progress.toFixed(4));
+        lastProgress = progress;
+      }
+
+      if (Math.abs(copyProgress - lastCopyProgress) > 0.001) {
+        hero.style.setProperty("--hero-copy-progress", copyProgress.toFixed(4));
+        lastCopyProgress = copyProgress;
+      }
+
+      if (Math.abs(portraitProgress - lastPortraitProgress) > 0.001) {
+        hero.style.setProperty(
+          "--hero-portrait-progress",
+          portraitProgress.toFixed(4)
+        );
+        lastPortraitProgress = portraitProgress;
+      }
 
       ticking = false;
     }
@@ -206,10 +234,24 @@
       window.requestAnimationFrame(updateHeroFade);
     }
 
+    syncHeroMetrics();
     updateHeroFade();
+
+    if (heroImage && !heroImage.complete) {
+      heroImage.addEventListener("load", syncHeroMetrics, { once: true });
+    }
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(syncHeroMetrics);
+    }
+
+    if (window.ResizeObserver) {
+      new window.ResizeObserver(syncHeroMetrics).observe(hero);
+    }
+
     window.addEventListener("scroll", requestUpdate, { passive: true });
-    window.addEventListener("resize", requestUpdate);
-    window.addEventListener("orientationchange", requestUpdate);
+    window.addEventListener("resize", syncHeroMetrics);
+    window.addEventListener("orientationchange", syncHeroMetrics);
   }
 
   function initNav() {
@@ -462,6 +504,7 @@
       var scenes = gallery.querySelectorAll("[data-gallery-scene]");
       var sceneSteps = gallery.querySelectorAll("[data-gallery-scene-step]");
       var previewFrame = gallery.querySelector(".project-gallery__preview-frame");
+      var sceneImages = gallery.querySelectorAll(".project-gallery__scene-media img");
       var ticking = false;
 
       if ((!steps.length || !previews.length) && !scenes.length) {
@@ -503,6 +546,74 @@
         gallery.style.setProperty(
           "--project-gallery-tail-space",
           Math.round(tailSpace) + "px"
+        );
+      }
+
+      function syncMobileSceneMetrics() {
+        var viewportHeight;
+        var maxSceneHeight = 0;
+        var baseStep;
+        var firstStep;
+        var lastStep;
+
+        if (!scenes.length || !sceneSteps.length || window.innerWidth > 860) {
+          gallery.style.removeProperty("--project-gallery-mobile-stage-height");
+          gallery.style.removeProperty("--project-gallery-mobile-stage-top");
+          gallery.style.removeProperty("--project-gallery-mobile-step-height");
+          gallery.style.removeProperty("--project-gallery-mobile-first-step-height");
+          gallery.style.removeProperty("--project-gallery-mobile-first-step-offset");
+          gallery.style.removeProperty("--project-gallery-mobile-last-step-height");
+          return;
+        }
+
+        viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        scenes.forEach(function (scene) {
+          var media = scene.querySelector(".project-gallery__scene-media");
+          var card = scene.querySelector(".project-gallery__scene-card");
+          var styles = window.getComputedStyle(scene);
+          var gap = parseFloat(styles.rowGap || styles.gap || "0");
+          var padTop = parseFloat(styles.paddingTop || "0");
+          var sceneHeight =
+            padTop +
+            (media ? media.offsetHeight : 0) +
+            gap +
+            (card ? card.offsetHeight : 0);
+
+          maxSceneHeight = Math.max(maxSceneHeight, Math.ceil(sceneHeight));
+        });
+
+        if (!maxSceneHeight) {
+          return;
+        }
+
+        baseStep = Math.max(168, Math.round(viewportHeight * 0.26));
+        firstStep = Math.max(56, Math.round(viewportHeight * 0.1));
+        lastStep = Math.max(baseStep + 120, Math.round(viewportHeight * 0.58));
+
+        gallery.style.setProperty(
+          "--project-gallery-mobile-stage-height",
+          Math.ceil(maxSceneHeight + Math.max(12, viewportHeight * 0.015)) + "px"
+        );
+        gallery.style.setProperty(
+          "--project-gallery-mobile-stage-top",
+          Math.max(18, Math.round((viewportHeight - maxSceneHeight) * 0.5)) + "px"
+        );
+        gallery.style.setProperty(
+          "--project-gallery-mobile-step-height",
+          baseStep + "px"
+        );
+        gallery.style.setProperty(
+          "--project-gallery-mobile-first-step-height",
+          firstStep + "px"
+        );
+        gallery.style.setProperty(
+          "--project-gallery-mobile-first-step-offset",
+          -firstStep + "px"
+        );
+        gallery.style.setProperty(
+          "--project-gallery-mobile-last-step-height",
+          lastStep + "px"
         );
       }
 
@@ -548,6 +659,7 @@
       }
 
       function updateGallery() {
+        syncMobileSceneMetrics();
         syncTailSpace();
 
         if (window.innerWidth <= 860 && scenes.length && sceneSteps.length) {
@@ -571,6 +683,16 @@
       updateGallery();
       window.addEventListener("scroll", queueGalleryUpdate, { passive: true });
       window.addEventListener("resize", queueGalleryUpdate);
+
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(queueGalleryUpdate);
+      }
+
+      sceneImages.forEach(function (image) {
+        if (!image.complete) {
+          image.addEventListener("load", queueGalleryUpdate, { once: true });
+        }
+      });
     });
   }
 

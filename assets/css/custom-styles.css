@@ -1,36 +1,16 @@
-/* barlow-condensed-700 */
 @font-face {
-  font-family: "Barlow Condensed";
-  src: url("/assets/fonts/barlow-condensed/barlow-condensed-v13-latin-700.woff2") format("woff2");
+  font-family: "Cormorant Garamond";
+  src: url("/assets/fonts/cormorant-garamond/cormorant-garamond-latin-variable.woff2") format("woff2");
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400 700;
   font-display: swap;
 }
 
-/* barlow-condensed-800 */
 @font-face {
-  font-family: "Barlow Condensed";
-  src: url("/assets/fonts/barlow-condensed/barlow-condensed-v13-latin-800.woff2") format("woff2");
+  font-family: "Manrope";
+  src: url("/assets/fonts/manrope/manrope-latin-variable.woff2") format("woff2");
   font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-}
-
-/* barlow-condensed-900 */
-@font-face {
-  font-family: "Barlow Condensed";
-  src: url("/assets/fonts/barlow-condensed/barlow-condensed-v13-latin-900.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-}
-
-/* hanken-grotesk variable (400–600) */
-@font-face {
-  font-family: "Hanken Grotesk";
-  src: url("/assets/fonts/hanken-grotesk/hanken-grotesk-v12-latin-variable.woff2") format("woff2");
-  font-style: normal;
-  font-weight: 400 600;
+  font-weight: 400 800;
   font-display: swap;
 }
 
@@ -56,6 +36,8 @@
   --radius-sm: 5px;
   --radius-md: 8px;
   --radius-lg: 12px;
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Manrope", "Segoe UI", Helvetica, Arial, sans-serif;
   --shell-width: 1280px;
   --shell-gutter: clamp(20px, 4vw, 40px);
   --section-gap: clamp(72px, 9vw, 110px);
@@ -86,7 +68,7 @@ body {
   overflow-x: hidden;
   background: var(--color-cream);
   color: var(--color-ink);
-  font-family: "Hanken Grotesk", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
   text-rendering: optimizeLegibility;
@@ -329,27 +311,27 @@ h5,
 h6 {
   margin: 0;
   color: inherit;
-  font-family: "Barlow Condensed", "Segoe UI", Helvetica, Arial, sans-serif;
-  font-weight: 800;
-  line-height: 1.04;
-  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 0.98;
+  letter-spacing: -0.025em;
 }
 
 h1 {
   font-size: clamp(3.4rem, 9vw, 6.5rem);
-  font-weight: 900;
+  font-weight: 700;
   max-width: 11ch;
 }
 
 h2 {
   font-size: clamp(2.2rem, 4.5vw, 3.8rem);
-  font-weight: 800;
+  font-weight: 700;
   max-width: 18ch;
 }
 
 h3 {
   font-size: clamp(1.2rem, 2vw, 1.6rem);
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.01em;
 }
 
@@ -744,7 +726,7 @@ p {
 
 .stat-card__value {
   margin-bottom: 0.45rem;
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(2.4rem, 4.5vw, 3.6rem);
   font-weight: 900;
   line-height: 1;
@@ -776,7 +758,7 @@ p {
 }
 
 .process-card__number {
-  font-family: "Barlow Condensed", sans-serif;
+  font-family: var(--font-display);
   font-size: 2.8rem;
   font-weight: 900;
   line-height: 1;
@@ -1776,7 +1758,7 @@ p {
   background: rgba(255, 255, 255, 0.05);
   box-shadow: var(--shadow-deep);
   color: rgba(214, 199, 255, 0.94);
-  font-family: "Barlow Condensed", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(1.42rem, 1.8vw, 1.76rem);
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -2214,7 +2196,7 @@ p {
   position: absolute;
   inset: clamp(14px, 2vw, 18px) clamp(18px, 2.4vw, 24px) auto auto;
   color: rgba(214, 199, 255, 0.15);
-  font-family: "Barlow Condensed", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(6rem, 14vw, 9.5rem);
   font-weight: 800;
   letter-spacing: -0.05em;
@@ -2343,7 +2325,7 @@ p {
 .site-footer__statement {
   max-width: 24ch;
   color: var(--color-white);
-  font-family: "Barlow Condensed", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(2.2rem, 3.6vw, 4rem);
   font-weight: 800;
   line-height: 1.04;
@@ -3181,6 +3163,7 @@ p {
   );
   transform-origin: left top;
   will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 
 .simon-hero__eyebrow {
@@ -3219,6 +3202,8 @@ p {
     scale(calc(1 + (var(--hero-portrait-progress) * 0.16)));
   transform-origin: center bottom;
   will-change: transform, opacity;
+  backface-visibility: hidden;
+  contain: paint;
 }
 
 .simon-hero__portrait {
@@ -3230,6 +3215,7 @@ p {
   overflow: visible;
   transform: none;
   isolation: isolate;
+  contain: paint;
 }
 
 .simon-hero__portrait::before {
@@ -3240,18 +3226,19 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(
-      180deg,
-      rgba(24, 4, 41, calc(var(--hero-portrait-progress) * 1.08)) 0%,
-      rgba(24, 4, 41, calc(var(--hero-portrait-progress) * 0.82)) 12%,
-      rgba(24, 4, 41, calc(var(--hero-portrait-progress) * 0.24)) 28%,
-      rgba(24, 4, 41, 0) 43%
-    );
+  background: linear-gradient(
+    180deg,
+    rgba(24, 4, 41, 0.98) 0%,
+    rgba(24, 4, 41, 0.78) 12%,
+    rgba(24, 4, 41, 0.22) 28%,
+    rgba(24, 4, 41, 0) 44%
+  );
   pointer-events: none;
   mix-blend-mode: normal;
   opacity: clamp(0, calc(var(--hero-portrait-progress) * 1.04), 1);
   will-change: opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .simon-hero__portrait img {
@@ -3265,7 +3252,7 @@ p {
   filter: saturate(0.96) brightness(0.985);
   transform: scaleX(-1);
   transform-origin: center bottom;
-  will-change: transform, opacity;
+  backface-visibility: hidden;
 }
 
 .signature-band__intro {
@@ -3526,7 +3513,7 @@ p {
 
 .project-gallery__index {
   color: rgba(124, 58, 237, 0.82);
-  font-family: "Barlow Condensed", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(3.2rem, 4.4vw, 4.8rem);
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -3565,14 +3552,22 @@ p {
 }
 
 .project-gallery__mobile-scenes {
+  --project-gallery-mobile-stage-height: min(76dvh, 640px);
+  --project-gallery-mobile-stage-top: calc(50dvh - var(--project-gallery-mobile-stage-height) / 2);
+  --project-gallery-mobile-scene-gap: clamp(26px, 4vh, 44px);
+  --project-gallery-mobile-scene-pad-top: clamp(20px, 3.4vh, 36px);
+  --project-gallery-mobile-step-height: 40dvh;
+  --project-gallery-mobile-first-step-height: 16dvh;
+  --project-gallery-mobile-first-step-offset: -16dvh;
+  --project-gallery-mobile-last-step-height: 48dvh;
   display: none;
   position: relative;
 }
 
 .project-gallery__mobile-stage {
   position: sticky;
-  top: calc(50svh - min(76svh, 640px) / 2);
-  min-height: min(76svh, 640px);
+  top: var(--project-gallery-mobile-stage-top);
+  min-height: var(--project-gallery-mobile-stage-height);
 }
 
 .project-gallery__scene {
@@ -3581,8 +3576,8 @@ p {
   display: grid;
   justify-items: center;
   align-content: start;
-  gap: clamp(34px, 4.8vh, 48px);
-  padding-top: clamp(24px, 3.6vh, 40px);
+  gap: var(--project-gallery-mobile-scene-gap);
+  padding-top: var(--project-gallery-mobile-scene-pad-top);
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -3627,6 +3622,8 @@ p {
   background: #35204d;
   opacity: 0.56;
   transform: translateY(28px) scale(0.975);
+  position: relative;
+  z-index: 1;
 }
 
 .project-gallery__scene-card > * {
@@ -3670,16 +3667,16 @@ p {
 }
 
 .project-gallery__scene-step {
-  height: 40svh;
+  height: var(--project-gallery-mobile-step-height);
 }
 
 .project-gallery__scene-step:first-child {
-  height: 16svh;
-  margin-top: -16svh;
+  height: var(--project-gallery-mobile-first-step-height);
+  margin-top: var(--project-gallery-mobile-first-step-offset);
 }
 
 .project-gallery__scene-step:last-child {
-  height: 48svh;
+  height: var(--project-gallery-mobile-last-step-height);
 }
 
 .audit-block__layout {
@@ -3868,6 +3865,16 @@ p {
 }
 
 @media (max-width: 640px) {
+  .project-gallery__mobile-scenes {
+    --project-gallery-mobile-stage-height: min(80dvh, 640px);
+    --project-gallery-mobile-scene-gap: clamp(18px, 3vh, 28px);
+    --project-gallery-mobile-scene-pad-top: clamp(12px, 2.2vh, 20px);
+    --project-gallery-mobile-step-height: 34dvh;
+    --project-gallery-mobile-first-step-height: 12dvh;
+    --project-gallery-mobile-first-step-offset: -18dvh;
+    --project-gallery-mobile-last-step-height: 62dvh;
+  }
+
   .simon-hero__visual {
     width: min(96vw, 420px);
   }
@@ -4019,7 +4026,7 @@ p {
 
 .services-page__hero-pillar span {
   color: rgba(214, 199, 255, 0.34);
-  font-family: "Barlow Condensed", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: var(--font-display);
   font-size: clamp(2.9rem, 4.6vw, 4.2rem);
   font-weight: 800;
   letter-spacing: -0.04em;
@@ -4158,11 +4165,6 @@ p {
 }
 
 @media (max-width: 640px) {
-  .project-gallery__mobile-stage {
-    top: calc(50svh - min(78svh, 640px) / 2);
-    min-height: min(78svh, 640px);
-  }
-
   .project-gallery__scene-media {
     aspect-ratio: 16 / 9;
     width: min(100%, 100vw - 40px);
@@ -4173,18 +4175,6 @@ p {
     margin-top: 0;
   }
 
-  .project-gallery__scene-step {
-    height: 34svh;
-  }
-
-  .project-gallery__scene-step:first-child {
-    height: 12svh;
-    margin-top: -18svh;
-  }
-
-  .project-gallery__scene-step:last-child {
-    height: 62svh;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) and (max-width: 860px) {
