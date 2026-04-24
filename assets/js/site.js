@@ -52,6 +52,55 @@
     });
   }
 
+  function initAboutHeroPills() {
+    var container = document.querySelector(".about-page__hero-notes");
+    var pills = container ? Array.from(container.querySelectorAll("span")) : [];
+    var activeIndex = 0;
+    var motionDuration = 1700;
+    var betweenDelay = 180;
+    var restartDelay = 260;
+
+    if (prefersReducedMotion || pills.length < 2) {
+      return;
+    }
+
+    function clearActive() {
+      container.classList.remove("is-shimmering");
+    }
+
+    function run() {
+      var pill = pills[activeIndex];
+      var containerRect = container.getBoundingClientRect();
+      var pillRect = pill.getBoundingClientRect();
+
+      clearActive();
+      container.style.setProperty(
+        "--about-pill-x",
+        pillRect.left - containerRect.left + "px"
+      );
+      container.style.setProperty(
+        "--about-pill-y",
+        pillRect.top - containerRect.top + "px"
+      );
+      container.style.setProperty("--about-pill-width", pillRect.width + "px");
+      container.style.setProperty("--about-pill-height", pillRect.height + "px");
+      void container.offsetWidth;
+      container.classList.add("is-shimmering");
+
+      window.setTimeout(function () {
+        container.classList.remove("is-shimmering");
+        activeIndex = (activeIndex + 1) % pills.length;
+
+        window.setTimeout(
+          run,
+          activeIndex === 0 ? restartDelay : betweenDelay
+        );
+      }, motionDuration);
+    }
+
+    window.setTimeout(run, 120);
+  }
+
   function initRevealAnimations() {
     var groups = [
       { selector: ".bio-section__intro > *", step: 45 },
@@ -1522,6 +1571,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     initCurrentLinks();
     initSectionLabels();
+    initAboutHeroPills();
     initRevealAnimations();
     initHeroFade();
     initHeaderScroll();

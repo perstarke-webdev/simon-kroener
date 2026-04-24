@@ -23,7 +23,7 @@ classes:
     <aside class="about-page__hero-media-card" aria-label="Simon Kröner">
       <div class="about-page__hero-media">
         <img
-          src="{{ '/assets/images/people/simon-kroener.webp' | relative_url }}"
+          src="{{ '/assets/images/people/about-simon-kroener-aboutpage-hero.webp' | relative_url }}"
           alt="Simon Kröner"
           width="2277"
           height="3325"

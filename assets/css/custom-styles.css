@@ -4052,7 +4052,7 @@ p {
   width: 100%;
   aspect-ratio: 0.78;
   object-fit: cover;
-  object-position: center 24%;
+  object-position: center top;
 }
 
 .about-solo__copy {
@@ -4368,6 +4368,8 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
+  position: relative;
+  isolation: isolate;
 }
 
 .about-page__hero-notes span,
@@ -4386,26 +4388,30 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.about-page__hero-notes span::after {
+.about-page__hero-notes::after {
   content: "";
   position: absolute;
-  inset: 0;
-  z-index: 0;
+  left: var(--about-pill-x, 0px);
+  top: var(--about-pill-y, 0px);
+  z-index: 2;
+  width: var(--about-pill-width, 0px);
+  height: var(--about-pill-height, 0px);
   padding: 1px;
-  border-radius: inherit;
+  border-radius: 999px;
   background:
     linear-gradient(
       115deg,
-      transparent 10%,
-      rgba(74, 222, 128, 0) 28%,
-      rgba(74, 222, 128, 0.32) 38%,
-      rgba(255, 255, 255, 0.96) 48%,
-      rgba(74, 222, 128, 0.86) 58%,
-      rgba(74, 222, 128, 0.24) 70%,
-      transparent 84%
+      transparent 0%,
+      transparent 38%,
+      rgba(74, 222, 128, 0.3) 45%,
+      rgba(255, 255, 255, 0.96) 50%,
+      rgba(74, 222, 128, 0.84) 55%,
+      rgba(74, 222, 128, 0.24) 62%,
+      transparent 68%,
+      transparent 100%
     );
-  background-size: 260% 100%;
-  background-position: 150% 0;
+  background-size: 240% 100%;
+  background-position: 145% 0;
   opacity: 0;
   pointer-events: none;
   -webkit-mask:
@@ -4413,80 +4419,31 @@ p {
     linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  animation: about-hero-pill-shimmer-1 6.72s linear infinite;
 }
 
-.about-page__hero-notes span:nth-child(2)::after {
-  animation-name: about-hero-pill-shimmer-2;
+.about-page__hero-notes.is-shimmering::after {
+  animation: about-hero-pill-shimmer-active 1.7s linear both;
 }
 
-.about-page__hero-notes span:nth-child(3)::after {
-  animation-name: about-hero-pill-shimmer-3;
-}
-
-@keyframes about-hero-pill-shimmer-1 {
-  0%,
-  1% {
+@keyframes about-hero-pill-shimmer-active {
+  0% {
     opacity: 0;
-    background-position: 165% 0;
+    background-position: 145% 0;
   }
 
-  3% {
+  6% {
     opacity: 1;
+    background-position: 145% 0;
   }
 
-  29% {
+  94% {
     opacity: 1;
+    background-position: -45% 0;
   }
 
-  32%,
   100% {
     opacity: 0;
-    background-position: -55% 0;
-  }
-}
-
-@keyframes about-hero-pill-shimmer-2 {
-  0%,
-  34.5% {
-    opacity: 0;
-    background-position: 165% 0;
-  }
-
-  36.5% {
-    opacity: 1;
-  }
-
-  62.5% {
-    opacity: 1;
-  }
-
-  65.5%,
-  100% {
-    opacity: 0;
-    background-position: -55% 0;
-  }
-}
-
-@keyframes about-hero-pill-shimmer-3 {
-  0%,
-  68% {
-    opacity: 0;
-    background-position: 165% 0;
-  }
-
-  70% {
-    opacity: 1;
-  }
-
-  96% {
-    opacity: 1;
-  }
-
-  99.5%,
-  100% {
-    opacity: 0;
-    background-position: -55% 0;
+    background-position: -45% 0;
   }
 }
 
@@ -4507,7 +4464,7 @@ p {
   width: 100%;
   aspect-ratio: 0.86;
   object-fit: cover;
-  object-position: center 18%;
+  object-position: center top;
 }
 
 .about-page__hero-caption {
@@ -4869,7 +4826,7 @@ p {
 
 .bio-section__media--simon img {
   aspect-ratio: 0.88;
-  object-position: 58% 22%;
+  object-position: 58% top;
   transform: translateX(10%) scale(2.7);
   transform-origin: center 44%;
 }
@@ -5080,7 +5037,7 @@ p {
 
   .about-page__hero-media img {
     aspect-ratio: 0.92;
-    object-position: center 16%;
+    object-position: center top;
   }
 
   .about-page__hero-caption {
@@ -5120,7 +5077,7 @@ p {
 
   .bio-section__media--simon img {
     aspect-ratio: 0.94;
-    object-position: 58% 18%;
+    object-position: 58% top;
     transform: translateX(8.5%) scale(2.46);
     transform-origin: center 42%;
   }
