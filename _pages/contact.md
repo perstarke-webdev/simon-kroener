@@ -13,7 +13,7 @@ classes:
   <div class="shell contact-page__hero-shell">
     <div class="hero-section__copy contact-page__hero-copy contact-page__hero-copy--editorial">
       <p class="section-label section-label--hero"><span class="status-dot" aria-hidden="true"></span>{{ contact.hero.label }}</p>
-      <h1>Lass uns sprechen.</h1>
+      <h1>Lass uns <span class="heading-accent">sprechen.</span></h1>
       <p class="hero-section__subtitle">{{ contact.hero.subtitle }}</p>
     </div>
 

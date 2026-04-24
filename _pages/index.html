@@ -16,7 +16,8 @@ classes:
       <p class="availability-pill"><span aria-hidden="true"></span>Verfügbar für neue Projekte</p>
       <p class="simon-hero__eyebrow">Webdesign · Branding · Performance</p>
       <h1>
-        <span class="simon-hero__line">Design, das</span><em><span> verkauft</span><span class="simon-hero__dot">.</span></em>
+        <span class="simon-hero__line">Design, das</span>
+        <em><span>verkauft</span><span class="simon-hero__dot">.</span></em>
       </h1>
       <p class="simon-hero__subtitle">Webdesign, das niemand vergisst und Anfragen, die nicht mehr aufhören.</p>
 
@@ -57,7 +58,7 @@ classes:
   <div class="shell">
     <div class="signature-band__intro">
       <p class="section-label section-label--dark"><span class="status-dot" aria-hidden="true"></span>Ausrichtung</p>
-      <h2>Drei Disziplinen. Eine Haltung.</h2>
+      <h2>Drei Skills.<br><span class="heading-accent">Ein System.</span></h2>
       <p class="section-lead">Ich entwickle digitale Auftritte, die hängen bleiben, klar durch Angebot und Inhalte führen und technisch sauber funktionieren. Keine losen Einzelleistungen, sondern eine stimmige Gesamtwirkung.</p>
     </div>
 
@@ -75,7 +76,7 @@ classes:
       <article class="signature-band__card">
         <p class="signature-band__number">03</p>
         <h3>Performance</h3>
-        <p>Saubere Umsetzung, schnelle Ladezeiten und eine stabile Struktur machen die Gestaltung glaubwürdig.</p>
+        <p>Saubere Umsetzung, schnelle Ladezeiten und eine stabile Struktur machen die Gestaltung glaubwürdig und überzeugend.</p>
       </article>
     </div>
   </div>
@@ -85,16 +86,16 @@ classes:
   <div class="shell">
     <div class="project-gallery__intro">
       <p class="section-label section-label--light"><span class="status-dot" aria-hidden="true"></span>Projekte</p>
-      <h2>Projekte aus der Praxis.</h2>
-      <p class="section-lead section-lead--light">Unterschiedliche Branchen, unterschiedliche Kontexte – immer mit demselben Anspruch an Gestaltung, Klarheit und Umsetzung.</p>
+      <h2>Projekte aus der <span class="heading-accent">Praxis.</span></h2>
+      <p class="section-lead section-lead--light">Unterschiedliche Branchen, unterschiedliche Unternehmen, aber immer mit demselben Anspruch an Design, Klarheit und Umsetzung.</p>
       <a class="button button--light" href="{{ home.portfolio.cta.url | relative_url }}">{{ home.portfolio.cta.label }}</a>
     </div>
 
     <div class="project-gallery">
       <div class="project-gallery__preview-frame">
         <div class="project-gallery__preview-stack">
-          {% for project in featured_projects limit: 4 %}
-            <article class="project-preview{% if forloop.first %} is-active{% endif %}" data-gallery-preview="{{ forloop.index0 }}">
+          {% for project in featured_projects limit: 5 %}
+            <article class="project-preview project-preview--{{ project.slug }}{% if forloop.first %} is-active{% endif %}" data-gallery-preview="{{ forloop.index0 }}">
               <div class="project-preview__media">
                 <img
                   src="{{ project.cover | relative_url }}"
@@ -114,7 +115,7 @@ classes:
       </div>
 
       <div class="project-gallery__entries">
-        {% for project in featured_projects limit: 4 %}
+        {% for project in featured_projects limit: 5 %}
           <article class="project-gallery__entry{% if forloop.first %} is-active{% endif %}" data-gallery-step="{{ forloop.index0 }}">
             <p class="project-gallery__index">0{{ forloop.index }}</p>
             <h3>{{ project.name }}</h3>
@@ -139,8 +140,8 @@ classes:
 
     <div class="project-gallery__mobile-scenes" aria-label="Ausgewählte Projekte">
       <div class="project-gallery__mobile-stage">
-        {% for project in featured_projects limit: 4 %}
-          <article class="project-gallery__scene{% if forloop.first %} is-active{% endif %}" data-gallery-scene="{{ forloop.index0 }}">
+        {% for project in featured_projects limit: 5 %}
+          <article class="project-gallery__scene project-gallery__scene--{{ project.slug }}{% if forloop.first %} is-active{% endif %}" data-gallery-scene="{{ forloop.index0 }}">
             <div class="project-gallery__scene-media">
               <img
                 src="{{ project.cover | relative_url }}"
@@ -174,7 +175,7 @@ classes:
       </div>
 
       <div class="project-gallery__mobile-track" aria-hidden="true">
-        {% for project in featured_projects limit: 4 %}
+        {% for project in featured_projects limit: 5 %}
           <div class="project-gallery__scene-step" data-gallery-scene-step="{{ forloop.index0 }}"></div>
         {% endfor %}
       </div>
@@ -182,7 +183,7 @@ classes:
   </div>
 </section>
 
-{% for project in featured_projects limit: 4 %}
+{% for project in featured_projects limit: 5 %}
   <dialog class="project-dialog" id="home-project-{{ project.slug }}" data-project-dialog aria-labelledby="home-project-{{ project.slug }}-title">
     <div class="project-dialog__header">
       <div>
@@ -232,7 +233,7 @@ classes:
       <ul class="check-list">
         {% for item in home.pain.bullet_points %}
           <li>
-            <span class="inline-icon inline-icon--check" aria-hidden="true">&#10003;</span>
+            <span class="inline-icon inline-icon--check" aria-hidden="true"></span>
             <span>{{ item }}</span>
           </li>
         {% endfor %}
@@ -261,12 +262,12 @@ classes:
 
     <div class="about-solo__copy">
       <p class="section-label section-label--dark"><span class="status-dot" aria-hidden="true"></span>Über mich</p>
-      <h2>Gestaltung mit Blick auf Wirkung.</h2>
-      <p class="section-lead">Mich interessiert nicht nur, ob eine Seite modern aussieht. Mich interessiert, ob sie Haltung zeigt, Vertrauen ausstrahlt und Besuchern in jeder Ansicht sofort Orientierung gibt.</p>
+      <h2>Gestaltung mit Blick auf <span class="heading-accent">Wirkung.</span></h2>
+      <p class="section-lead">Mich interessiert nicht nur, ob eine Webseite modern aussieht. Mich interessiert, ob sie Haltung zeigt, Vertrauen aufbaut und Besuchern in jeder Ansicht sofort Orientierung und Impuls gibt.</p>
       <div class="about-solo__points">
         <p>Mein Hintergrund liegt in Design, Branding und der Frage, wie Marken digital wahrgenommen werden.</p>
-        <p>Deshalb entstehen keine dekorativen Oberflächen, sondern Auftritte mit Charakter, Klarheit und technischer Substanz.</p>
-        <p class="about-solo__note">Je nach Projekt erfolgt die Umsetzung über <a href="https://kroener-starke.ch/" target="_blank" rel="noopener noreferrer">Kröner &amp; Starke Web Development</a> gemeinsam mit meinem Businesspartner Per Starke.</p>
+        <p>Deshalb entstehen keine dekorativen Oberflächen, sondern Auftritte mit Charakter, Klarheit und Überzeugungsfähigkeit.</p>
+        <p class="about-solo__note">Je nach Projekt erfolgt die Umsetzung zusätzlich über unsere Agentur <a href="https://kroener-starke.ch/" target="_blank" rel="noopener noreferrer">Kröner &amp; Starke Web Development</a> gemeinsam mit meinem Geschäftspartner Per Starke, der fundierte technische Expertise für jedes Projekt mitbringt.</p>
       </div>
       <a class="button button--secondary" href="{{ '/ueber-mich/' | relative_url }}">Mehr über mich</a>
     </div>

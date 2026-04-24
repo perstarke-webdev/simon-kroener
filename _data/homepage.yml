@@ -1,6 +1,6 @@
 pain:
-  title: "Wie stark wirkt deine Website heute wirklich?"
-  intro: "Im kostenlosen Website-Check zeige ich dir, wo dein Auftritt bei Klarheit, Wiedererkennung oder technischer Qualität Potenzial liegen lässt – und wo du gezielt nachschärfen kannst."
+  title: "Wie stark wirkt deine Website heute <span class=\"heading-accent\">wirklich?</span>"
+  intro: "Im kostenlosen Website-Check zeige ich dir, wo dein Auftritt bei Klarheit, Wiedererkennung oder technischer Qualität Potenzial liegen lässt und wo du gezielt nachschärfen kannst."
   audit_title: "Kostenloser Website-Check"
   audit_text: "Schick mir deine Domain und ich melde mich mit einer ehrlichen ersten Einschätzung zu Wirkung, Struktur und Performance."
   bullet_points:
@@ -13,7 +13,7 @@ pain:
     phone_label: "Deine Telefonnummer"
     phone_placeholder: "+41 00 000 00 00"
     submit_label: "Website analysieren"
-    success_message: "Danke – ich schaue mir deine Website an und melde mich mit einer ersten Einschätzung."
+    success_message: "Danke, ich schaue mir deine Website an und melde mich mit einer ersten Einschätzung."
     privacy_note: ""
 
 portfolio:

@@ -11,8 +11,8 @@ classes:
   <div class="shell about-page__hero-shell">
     <div class="hero-section__copy about-page__hero-copy about-page__hero-copy--editorial">
       <p class="section-label section-label--hero"><span class="status-dot" aria-hidden="true"></span>Simon Kröner</p>
-      <h1>Gestaltung mit Haltung.</h1>
-      <p class="hero-section__subtitle">Ich entwickle digitale Auftritte, die prägnant, präzise und hochwertig wirken. Nicht als dekorative Oberfläche, sondern als klare Übersetzung von Marke und Qualität.</p>
+      <h1>Gestaltung mit <span class="heading-accent">Haltung.</span></h1>
+      <p class="hero-section__subtitle">Ich entwickle digitale Auftritte, die präzise, hochwertig und überzeugend sind. Nicht als digitaler Platzhalter, sondern als klare Übersetzung von Marke und Qualität deines Unternehmens.</p>
       <div class="about-page__hero-notes">
         <span>Webdesign</span>
         <span>Branding</span>
@@ -32,7 +32,7 @@ classes:
         >
       </div>
       <div class="about-page__hero-caption">
-        <p>Mich interessiert, wie ein Auftritt gelesen wird: im ersten Eindruck, in der Markenwirkung und in der Qualität der Umsetzung dahinter.</p>
+        <p>Mich fasziniert, wie ein Auftritt gelesen wird: im ersten Eindruck, in der Markenwirkung und in der Qualität der Umsetzung dahinter.</p>
       </div>
     </aside>
   </div>
@@ -42,16 +42,15 @@ classes:
   <div class="shell bio-section">
     <div class="bio-section__copy">
       <div class="bio-section__intro">
-        <h2>Was meine Arbeit prägt</h2>
-        <p class="bio-section__role">Webdesign, Branding &amp; Wirkung</p>
-        <p class="bio-section__highlight">Ich verbinde gestalterisches Gespür mit einer klaren Wahrnehmung dafür, wie digitale Auftritte auf Menschen wirken und warum manche Seiten sofort Vertrauen auslösen, während andere beliebig bleiben.</p>
+        <h2>Was meine<br><span class="heading-accent">Arbeit prägt</span></h2>
+        <p class="bio-section__highlight">Ich verbinde gestalterisches Gespür mit einer klaren Wahrnehmung dafür, wie digitale Auftritte auf Menschen wirken und warum manche Seiten sofort Vertrauen auslösen, während andere nach einem Klick vergessen sind.</p>
       </div>
 
       <div class="bio-section__body">
         <p>Ich arbeite an der Schnittstelle von Gestaltung, Markenbild und digitaler Präsenz. Genau dort entscheidet sich oft, ob ein Unternehmen online stark wirkt oder austauschbar bleibt.</p>
         <p>Mich interessiert keine Oberfläche um ihrer selbst willen. Mich interessiert Präzision: klare Typografie, ein stimmiger Ton, nachvollziehbare Dramaturgie und eine Website, die in jeder Größe sauber funktioniert.</p>
         <p>Diese Haltung zieht sich durch jedes Projekt, unabhängig davon, ob es um einen Relaunch, ein Branding oder einen komplett neuen Auftritt geht.</p>
-        <p class="bio-section__note">Je nach Projekt erfolgt die Umsetzung über <a href="https://kroener-starke.ch/" target="_blank" rel="noopener noreferrer">Kröner &amp; Starke Web Development</a> gemeinsam mit meinem Businesspartner Per Starke.</p>
+        <p class="bio-section__note">Je nach Projekt erfolgt die Umsetzung zusätzlich über unsere Agentur <a href="https://kroener-starke.ch/" target="_blank" rel="noopener noreferrer">Kröner &amp; Starke Web Development</a> gemeinsam mit meinem Geschäftspartner Per Starke, der fundierte technische Expertise für jedes Projekt mitbringt.</p>
       </div>
     </div>
 
@@ -65,8 +64,8 @@ classes:
   <div class="shell about-page__why">
     <div class="section-heading about-page__why-heading">
       <p class="section-label section-label--dark"><span class="status-dot" aria-hidden="true"></span>Arbeitsweise</p>
-      <h2>Drei Dinge, auf die ich immer achte</h2>
-      <p class="section-lead">Nicht als Checkliste, sondern als Raster für jede Entscheidung: Klarheit, Charakter und Substanz müssen gleichzeitig tragen, sonst bleibt ein Auftritt austauschbar.</p>
+      <h2>Drei Dinge, auf die ich<br><span class="heading-accent">immer achte</span></h2>
+      <p class="section-lead">Es geht nicht um eine Checkliste, sondern um ein Raster für jede Entscheidung: Klarheit, Charakter und Substanz müssen zusammenspielen, sonst bleibt ein Auftritt austauschbar.</p>
     </div>
 
     <div class="about-page__why-grid about-page__why-grid--three">
@@ -76,7 +75,7 @@ classes:
       </article>
       <article class="about-page__why-card">
         <p class="section-lead">Charakter</p>
-        <p>Markenwirkung entsteht durch konsequente Entscheidungen in Typografie, Farbe, Bildwelt und Tonalität.</p>
+        <p>Markenwirkung entsteht durch konsequente Entscheidungen in Typografie, Farbe, Bildwelt und Design generell.</p>
       </article>
       <article class="about-page__why-card">
         <p class="section-lead">Substanz</p>

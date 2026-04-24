@@ -17,8 +17,8 @@ classes:
   <div class="shell portfolio-page__hero-shell">
     <div class="hero-section__copy portfolio-page__hero-copy portfolio-page__hero-copy--editorial">
       <p class="section-label section-label--hero"><span class="status-dot" aria-hidden="true"></span>Meine Kund:innen</p>
-      <h1>Ausgewählte Arbeiten.</h1>
-      <p class="hero-section__subtitle">Unterschiedliche Branchen, unterschiedliche Kontexte – immer mit demselben Anspruch an Gestaltung, Klarheit und Umsetzung.</p>
+      <h1>Ausgewählte<br><span class="heading-accent">Arbeiten.</span></h1>
+      <p class="hero-section__subtitle">Unterschiedliche Branchen, unterschiedliche Unternehmen, aber immer mit demselben Anspruch an Design, Klarheit und Umsetzung.</p>
       <div class="hero-section__actions portfolio-page__hero-actions">
         <a class="button button--secondary" href="mailto:{{ legal.simon.email }}?subject=Mehr%20Referenzen%20auf%20Anfrage">
           Mehr Referenzen auf Anfrage

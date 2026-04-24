@@ -794,7 +794,7 @@
 
   function initAboutWhyTilt() {
     var cards = document.querySelectorAll(
-      ".about-page__why-card, .services-page__system-panel, .services-page__process-track .process-card"
+      ".about-page__why-card, .services-page__system-panel, .services-page__process-track .process-card, .services-page__hero-pillar"
     );
     var tiltIntensity = 7.8;
     var canHover =
@@ -834,18 +834,26 @@
       }
 
       function resetTilt() {
+        if (frameId !== null) {
+          window.cancelAnimationFrame(frameId);
+          frameId = null;
+        }
+
         queueTilt(0, 0);
       }
 
-      card.addEventListener("mousemove", function (event) {
+      card.addEventListener("pointerenter", resetTilt);
+
+      card.addEventListener("pointermove", function (event) {
         var bounds = card.getBoundingClientRect();
         var relativeX = (event.clientX - bounds.left) / bounds.width - 0.5;
         var relativeY = (event.clientY - bounds.top) / bounds.height - 0.5;
 
         queueTilt(relativeY * -tiltIntensity, relativeX * tiltIntensity);
-      });
+      }, { passive: true });
 
-      card.addEventListener("mouseleave", resetTilt);
+      card.addEventListener("pointerleave", resetTilt);
+      card.addEventListener("pointercancel", resetTilt);
       card.addEventListener("blur", resetTilt);
     });
   }

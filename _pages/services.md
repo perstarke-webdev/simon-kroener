@@ -11,7 +11,7 @@ classes:
   <div class="shell services-page__hero-shell">
     <div class="hero-section__copy services-page__hero-copy">
       <p class="section-label section-label--hero"><span class="status-dot" aria-hidden="true"></span>Webdesign · Branding · Performance</p>
-      <h1>Ein Auftritt, der als Ganzes überzeugt.</h1>
+      <h1>Ein Auftritt, der <span class="heading-accent">als Ganzes überzeugt.</span></h1>
       <p class="hero-section__subtitle">Ich entwickle Websites nicht aus Einzelleistungen, sondern aus Klarheit, Wiedererkennung und einer technischen Basis, die das Niveau der Gestaltung mitträgt.</p>
 
       <div class="hero-section__actions">
@@ -45,19 +45,19 @@ classes:
 <section class="section section--cream services-page__problem">
   <div class="shell section-grid services-page__problem-grid">
     <div class="section-heading services-page__split-heading">
-      <h2>Warum viele Websites trotz Aufwand nicht richtig tragen</h2>
-      <p class="section-lead">Oft ist nicht eine einzige Sache falsch. Es sind mehrere kleine Brüche, die zusammen dafür sorgen, dass ein Auftritt schwächer wirkt, als das Unternehmen dahinter eigentlich ist.</p>
+      <h2>Warum viele Websites trotz allem<br><span class="heading-accent">nicht überzeugen</span></h2>
+      <p class="section-lead">Oft ist nicht eine einzige Sache falsch. Es sind mehrere kleine Brüche, die zusammen dafür sorgen, dass ein Auftritt schwächer wirkt, als das Unternehmen dahinter eigentlich ist. Das kostet täglich Vertrauen und Autorität.</p>
     </div>
 
     <article class="services-page__problem-card services-page__problem-card--list">
       <p class="section-kicker">Typische Bruchstellen</p>
       <ul class="services-page__problem-list">
-        <li>Der erste Eindruck ist ordentlich, aber nicht prägnant genug.</li>
-        <li>Marke, Texte und Gestaltung ziehen nicht in dieselbe Richtung.</li>
-        <li>Mobil verliert der Auftritt Klarheit, Tempo oder Übersicht.</li>
-        <li>Technik und Struktur fühlen sich wie Nacharbeit statt wie Teil der Qualität an.</li>
+        <li><span class="inline-icon inline-icon--cross" aria-hidden="true"></span><span>Der erste Eindruck ist ordentlich, aber nicht prägnant genug.</span></li>
+        <li><span class="inline-icon inline-icon--cross" aria-hidden="true"></span><span>Marke, Texte und Gestaltung ziehen nicht in dieselbe Richtung.</span></li>
+        <li><span class="inline-icon inline-icon--cross" aria-hidden="true"></span><span>Mobil verliert der Auftritt Klarheit, Tempo oder Übersicht.</span></li>
+        <li><span class="inline-icon inline-icon--cross" aria-hidden="true"></span><span>Technik und Struktur fühlen sich wie Flickarbeit statt wie Teil der Qualität an.</span></li>
       </ul>
-      <p class="services-page__problem-result">Genau dort beginne ich: nicht bei einer Einzeldisziplin, sondern beim Gesamtbild.</p>
+      <p class="services-page__problem-result">Genau dort beginnen wir: nicht bei einer Einzeldisziplin, sondern beim Gesamtbild.</p>
     </article>
   </div>
 </section>
@@ -65,7 +65,7 @@ classes:
 <section class="section section--deep services-page__system">
   <div class="shell">
     <div class="section-heading">
-      <h2>Worauf ich in jedem Projekt besonders achte</h2>
+      <h2>Worauf ich in jedem Projekt<br><span class="heading-accent">besonders achte</span></h2>
       <p class="section-lead">Eine Website überzeugt nicht nur über Oberfläche. Sie muss Orientierung geben, wiedererkennbar sein und technisch so sauber funktionieren, wie sie visuell auftritt.</p>
     </div>
 
@@ -90,7 +90,7 @@ classes:
 <section class="section section--cream services-page__process">
   <div class="shell">
     <div class="section-heading services-page__split-heading services-page__process-heading">
-      <h2>So entsteht dein neuer Auftritt</h2>
+      <h2>So entsteht dein<br><span class="heading-accent">neuer Auftritt</span></h2>
       <p class="section-lead">Der Ablauf ist bewusst klar strukturiert: erst Richtung, dann Gestaltung, dann technische Präzision. So greift jede Entscheidung sauber in die nächste.</p>
     </div>
 
@@ -137,7 +137,7 @@ classes:
 <section class="section section--white services-page__outcomes">
   <div class="shell section-grid services-page__outcomes-grid">
     <div class="section-heading services-page__split-heading">
-      <h2>Woran du den Unterschied am Ende merkst</h2>
+      <h2>Woran du am Ende den<br><span class="heading-accent">Unterschied erkennst</span></h2>
       <p class="section-lead">Nicht an einzelnen Designentscheidungen, sondern daran, wie geschlossen der ganze Auftritt wirkt und wie selbstverständlich er sich benutzen lässt.</p>
     </div>
 
@@ -145,16 +145,16 @@ classes:
       <p class="section-kicker">Dein Auftritt wirkt am Ende so, dass er</p>
       <ul class="check-list">
         <li>
-          <span class="inline-icon inline-icon--check" aria-hidden="true">&#10003;</span>
-          <span>deine Qualität sichtbar macht, ohne sie erst ausführlich erklären zu müssen</span>
+          <span class="inline-icon inline-icon--check" aria-hidden="true"></span>
+          <span>Deine Qualität sichtbar macht, ohne sie erst ausführlich erklären zu müssen.</span>
         </li>
         <li>
-          <span class="inline-icon inline-icon--check" aria-hidden="true">&#10003;</span>
-          <span>auf Desktop und Mobile gleich präzise und ruhig funktioniert</span>
+          <span class="inline-icon inline-icon--check" aria-hidden="true"></span>
+          <span>Auf Desktop und Mobile gleich präzise und ruhig funktioniert.</span>
         </li>
         <li>
-          <span class="inline-icon inline-icon--check" aria-hidden="true">&#10003;</span>
-          <span>auch nach dem Launch eine saubere Basis für Sichtbarkeit und Weiterentwicklung bleibt</span>
+          <span class="inline-icon inline-icon--check" aria-hidden="true"></span>
+          <span>Auch nach dem Launch eine saubere Basis für Sichtbarkeit und Weiterentwicklung bleibt.</span>
         </li>
       </ul>
     </div>

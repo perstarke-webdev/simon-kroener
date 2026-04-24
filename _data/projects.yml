@@ -419,7 +419,7 @@
       height: 1980
 
 - slug: "lynn-starke"
-  featured: false
+  featured: true
   name: "Lynn Starke"
   industry:
     - "Sport & Fitness"

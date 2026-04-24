@@ -1,7 +1,7 @@
 hero:
   label: "Projekt anfragen"
   title: "Projekt anfragen"
-  subtitle: "Schreib mir kurz, worum es geht. Ich melde mich persönlich mit einer ehrlichen ersten Einschätzung zurück."
+  subtitle: "Gib mir Bescheid, worum es geht. Ich melde mich persönlich und praxisorientiert mit einem offenen Feedback zurück."
 
 form:
   name_label: "Dein Name*"
@@ -13,7 +13,7 @@ form:
   message_label: "Worum geht es bei deinem Projekt?*"
   message_placeholder: "Kurze Beschreibung deines Projekts, deiner Ziele oder deiner aktuellen Situation"
   submit_label: "Projekt anfragen"
-  success_message: "Danke – ich habe deine Anfrage erhalten und melde mich persönlich, in der Regel noch am selben Werktag."
+  success_message: "Danke, ich habe deine Anfrage erhalten und melde mich persönlich, in der Regel noch am selben Werktag."
 
 analysis:
   label: "Oder starte mit einer Analyse"
