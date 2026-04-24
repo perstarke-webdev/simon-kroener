@@ -45,7 +45,7 @@ classes:
 <section class="section section--cream services-page__problem">
   <div class="shell section-grid services-page__problem-grid">
     <div class="section-heading services-page__split-heading">
-      <h2>Warum viele Websites trotz allem<br><span class="heading-accent">nicht überzeugen</span></h2>
+      <h2>Warum viele Websites trotz allem <span class="heading-accent">nicht überzeugen</span></h2>
       <p class="section-lead">Oft ist nicht eine einzige Sache falsch. Es sind mehrere kleine Brüche, die zusammen dafür sorgen, dass ein Auftritt schwächer wirkt, als das Unternehmen dahinter eigentlich ist. Das kostet täglich Vertrauen und Autorität.</p>
     </div>
 
@@ -137,7 +137,7 @@ classes:
 <section class="section section--white services-page__outcomes">
   <div class="shell section-grid services-page__outcomes-grid">
     <div class="section-heading services-page__split-heading">
-      <h2>Woran du am Ende den<br><span class="heading-accent">Unterschied erkennst</span></h2>
+      <h2>Woran du am Ende<br><span class="heading-accent">den Unterschied erkennst</span></h2>
       <p class="section-lead">Nicht an einzelnen Designentscheidungen, sondern daran, wie geschlossen der ganze Auftritt wirkt und wie selbstverständlich er sich benutzen lässt.</p>
     </div>
 
