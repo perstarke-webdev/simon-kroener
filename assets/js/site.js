@@ -101,6 +101,145 @@
     window.setTimeout(run, 120);
   }
 
+  function initBadgeOrbit() {
+    var orbits = document.querySelectorAll("[data-badge-orbit]");
+
+    if (!orbits.length) {
+      return;
+    }
+
+    function normalizeLength(value, fallback) {
+      var parsed = Number.parseFloat(value);
+
+      return Number.isFinite(parsed) ? parsed : fallback;
+    }
+
+    function normalizeDuration(value, fallback) {
+      var parsed = Number.parseFloat(value);
+
+      if (!Number.isFinite(parsed)) {
+        return fallback;
+      }
+
+      return value.trim().endsWith("ms") ? parsed : parsed * 1000;
+    }
+
+    orbits.forEach(function (orbit) {
+      var rail = orbit.querySelector(".site-footer__badge-orbit-rail");
+      var traces = Array.from(
+        orbit.querySelectorAll(".site-footer__badge-orbit-trace")
+      );
+
+      if (!rail || traces.length < 2 || typeof rail.getTotalLength !== "function") {
+        return;
+      }
+
+      var badge = orbit.closest(".site-footer__badge") || orbit;
+      var styles = window.getComputedStyle(badge);
+      var total = rail.getTotalLength();
+      var baseTraceLength =
+        total *
+        (normalizeLength(styles.getPropertyValue("--badge-trace-length"), 8) /
+          100);
+      var baseOpacity = normalizeLength(
+        styles.getPropertyValue("--badge-trace-opacity"),
+        0.67
+      );
+      var duration = normalizeDuration(
+        styles.getPropertyValue("--badge-orbit-duration"),
+        6800
+      );
+      var animationFrame = 0;
+      var lastTimestamp = 0;
+      var distance = 0;
+
+      function pointAt(distanceValue) {
+        var normalized = ((distanceValue % total) + total) % total;
+
+        return rail.getPointAtLength(normalized);
+      }
+
+      function sideBiasAt(distanceValue) {
+        var phase = (((distanceValue / total) % 1) + 1) % 1;
+        var sideBias = Math.sin(phase * Math.PI * 2);
+
+        return sideBias * sideBias;
+      }
+
+      function getMotionState(distanceValue) {
+        var sideBias = sideBiasAt(distanceValue);
+
+        return {
+          length: baseTraceLength * (0.5 + sideBias * 1.5),
+          opacity: Math.min(1, baseOpacity * (1 + sideBias * 0.5)),
+          speed: 0.5 + sideBias * 1.5,
+        };
+      }
+
+      function buildTrace(center, length) {
+        var path = "";
+        var steps = Math.max(10, Math.ceil(length / 1.25));
+        var start = center - length / 2;
+
+        for (var index = 0; index <= steps; index += 1) {
+          var point = pointAt(start + (length * index) / steps);
+          var command = index === 0 ? "M" : "L";
+          path += command + " " + point.x.toFixed(2) + " " + point.y.toFixed(2) + " ";
+        }
+
+        return path.trim();
+      }
+
+      function draw(distanceValue) {
+        var state = getMotionState(distanceValue);
+
+        traces[0].setAttribute("d", buildTrace(distanceValue, state.length));
+        traces[1].setAttribute(
+          "d",
+          buildTrace(distanceValue + total / 2, state.length)
+        );
+        traces.forEach(function (trace) {
+          trace.style.opacity = state.opacity.toFixed(3);
+        });
+      }
+
+      draw(0);
+      orbit.classList.add("is-ready");
+
+      if (prefersReducedMotion) {
+        return;
+      }
+
+      function tick(timestamp) {
+        var elapsed;
+        var state;
+
+        if (!lastTimestamp) {
+          lastTimestamp = timestamp;
+        }
+
+        elapsed = timestamp - lastTimestamp;
+        state = getMotionState(distance);
+        distance = (distance + (total * elapsed * state.speed) / duration) % total;
+        draw(distance);
+        lastTimestamp = timestamp;
+        animationFrame = window.requestAnimationFrame(tick);
+      }
+
+      animationFrame = window.requestAnimationFrame(tick);
+
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden && animationFrame) {
+          window.cancelAnimationFrame(animationFrame);
+          animationFrame = 0;
+        } else if (!document.hidden && !animationFrame) {
+          lastTimestamp = 0;
+          animationFrame = window.requestAnimationFrame(tick);
+        }
+      });
+    });
+  }
+
   function initRevealAnimations() {
     var groups = [
       { selector: ".bio-section__intro > *", step: 45 },
@@ -1572,6 +1711,7 @@
     initCurrentLinks();
     initSectionLabels();
     initAboutHeroPills();
+    initBadgeOrbit();
     initRevealAnimations();
     initHeroFade();
     initHeaderScroll();
