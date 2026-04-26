@@ -3395,7 +3395,7 @@ p {
   --hero-copy-shift: -30px;
   --hero-portrait-shift: -14px;
   --hero-portrait-scale-delta: 0.16;
-  --hero-portrait-top-safe: clamp(180px, 19vh, 228px);
+  --hero-portrait-top-safe: clamp(112px, 12.5vh, 150px);
   min-height: 100vh;
   min-height: 100svh;
   padding: clamp(110px, 9vw, 138px) 0 0;
@@ -3471,11 +3471,11 @@ p {
 
 .simon-hero__visual {
   position: absolute;
-  right: clamp(-10px, -0.9vw, -2px);
+  right: clamp(-96px, -5.8vw, -60px);
   bottom: 0;
   width: auto;
-  height: min(clamp(585px, 57vw, 820px), calc(100vh - var(--hero-portrait-top-safe)));
-  height: min(clamp(585px, 57vw, 820px), calc(100svh - var(--hero-portrait-top-safe)));
+  height: min(clamp(640px, 61.8vw, 890px), calc(100vh - var(--hero-portrait-top-safe)));
+  height: min(clamp(640px, 61.8vw, 890px), calc(100svh - var(--hero-portrait-top-safe)));
   aspect-ratio: 1694 / 2109;
   min-height: 0;
   opacity: calc(1 - (var(--hero-portrait-progress) * 0.66));
@@ -3534,7 +3534,7 @@ p {
   max-width: none;
   object-fit: contain;
   object-position: right bottom;
-  filter: none;
+  filter: saturate(1.34) hue-rotate(-3deg) brightness(0.9) contrast(0.98);
   transform: scaleX(-1);
   transform-origin: center bottom;
   backface-visibility: hidden;
@@ -3602,7 +3602,7 @@ p {
 
 .signature-band__card:nth-child(2) {
   --signature-card-bg:
-    linear-gradient(145deg, rgba(248, 244, 255, 0.98), rgba(229, 217, 255, 0.9));
+    linear-gradient(145deg, rgba(244, 238, 255, 0.98), rgba(219, 204, 255, 0.92));
   --signature-card-border: rgba(124, 58, 237, 0.16);
   --signature-card-shadow: 0 22px 60px rgba(58, 21, 105, 0.08);
   margin-top: var(--space-md);
@@ -3611,7 +3611,7 @@ p {
 .signature-band__card:nth-child(3) {
   --signature-card-bg:
     radial-gradient(circle at 88% 8%, rgba(124, 58, 237, 0.26), transparent 34%),
-    linear-gradient(145deg, rgba(59, 25, 94, 0.98), rgba(38, 12, 65, 0.96));
+    linear-gradient(145deg, rgba(66, 31, 104, 0.98), rgba(47, 18, 76, 0.96));
   --signature-card-border: rgba(214, 199, 255, 0.18);
   --signature-card-ink: rgba(255, 255, 255, 0.82);
   --signature-card-title: rgba(255, 255, 255, 0.94);
