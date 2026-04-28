@@ -1983,6 +1983,9 @@ p {
 .services-page__process-track .process-card h3 {
   max-width: none;
   margin-top: 0.3rem;
+  font-size: clamp(1.18rem, 1.75vw, 1.42rem);
+  font-weight: 700;
+  line-height: 1.08;
   white-space: nowrap;
 }
 
@@ -2914,7 +2917,7 @@ p {
 
 .site-footer__badge {
   --badge-orbit-duration: 6.8s;
-  --badge-orbit-thickness: 1px;
+  --badge-orbit-thickness: 3px;
   --badge-trace-length: 8;
   --badge-trace-opacity: 0.67;
   --badge-rail: rgba(35, 27, 45, 0.14);
@@ -2955,7 +2958,7 @@ p {
 
 .site-footer__badge-orbit-rail {
   stroke: var(--badge-rail);
-  stroke-width: 1;
+  stroke-width: var(--badge-orbit-thickness);
 }
 
 .site-footer__badge-orbit-trace {
@@ -3208,21 +3211,22 @@ p {
 
   .site-footer__statement {
     display: block;
-    max-width: 12.8ch;
-    font-size: clamp(1.95rem, 8.4vw, 2.55rem);
+    max-width: 100%;
+    font-size: clamp(1.78rem, 7.3vw, 2.2rem);
     line-height: 1.04;
     letter-spacing: -0.018em;
   }
 
   .site-footer__statement > span {
-    display: inline;
+    display: block;
   }
 
   .site-footer__statement .heading-accent {
-    display: inline;
+    display: block;
     font-size: 1.08em;
     line-height: inherit;
     transform: translateY(0);
+    white-space: nowrap;
   }
 
   .site-footer__note {
@@ -3664,15 +3668,17 @@ p {
 
 
 .project-gallery-section {
+  --project-gallery-gap: clamp(36px, 4vw, 56px);
   overflow: clip;
 }
 
 .project-gallery__intro {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.86fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   row-gap: clamp(0.72rem, 1vw, 1rem);
-  column-gap: clamp(28px, 5vw, 76px);
-  max-width: none;
+  column-gap: var(--project-gallery-gap);
+  max-width: 1160px;
+  margin-inline: auto;
   margin-bottom: clamp(28px, 4vw, 46px);
 }
 
@@ -3695,13 +3701,14 @@ p {
 .project-gallery__intro .section-lead {
   grid-column: 2;
   grid-row: 2;
-  max-width: 46ch;
+  max-width: none;
 }
 
 .project-gallery__intro > .button {
   grid-column: 2;
   grid-row: 3;
-  justify-self: start;
+  width: 100%;
+  justify-self: stretch;
   align-self: start;
   margin-top: clamp(0.25rem, 0.7vw, 0.5rem);
 }
@@ -3711,7 +3718,7 @@ p {
   --project-gallery-panel-height: clamp(290px, 23vw, 330px);
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(36px, 4vw, 56px);
+  gap: var(--project-gallery-gap);
   align-items: start;
   max-width: 1160px;
   margin-inline: auto;
@@ -3920,10 +3927,10 @@ p {
   --project-gallery-mobile-scene-gap: clamp(26px, 4vh, 44px);
   --project-gallery-mobile-scene-pad-top: clamp(20px, 3.4vh, 36px);
   --project-gallery-mobile-card-min-height: 0px;
-  --project-gallery-mobile-step-height: 40dvh;
-  --project-gallery-mobile-first-step-height: 16dvh;
-  --project-gallery-mobile-first-step-offset: -16dvh;
-  --project-gallery-mobile-last-step-height: 48dvh;
+  --project-gallery-mobile-step-height: 54dvh;
+  --project-gallery-mobile-first-step-height: 14dvh;
+  --project-gallery-mobile-first-step-offset: -74dvh;
+  --project-gallery-mobile-last-step-height: 76dvh;
   display: none;
   position: relative;
 }
@@ -4277,10 +4284,10 @@ p {
     --project-gallery-mobile-stage-height: min(80dvh, 640px);
     --project-gallery-mobile-scene-gap: clamp(18px, 3vh, 28px);
     --project-gallery-mobile-scene-pad-top: clamp(12px, 2.2vh, 20px);
-    --project-gallery-mobile-step-height: 34dvh;
-    --project-gallery-mobile-first-step-height: 12dvh;
-    --project-gallery-mobile-first-step-offset: -18dvh;
-    --project-gallery-mobile-last-step-height: 62dvh;
+    --project-gallery-mobile-step-height: 54dvh;
+    --project-gallery-mobile-first-step-height: 14dvh;
+    --project-gallery-mobile-first-step-offset: -74dvh;
+    --project-gallery-mobile-last-step-height: 76dvh;
   }
 
   .simon-hero__visual {

@@ -110,7 +110,7 @@ classes:
       <article class="process-card" id="service-step-03">
         <p class="process-card__number">03</p>
         <h3>Branding</h3>
-        <p>Farben, Ton, Typografie und Bildwelt werden so ausgerichtet, dass ein wiedererkennbarer und unverwechselbarer Eindruck entsteht.</p>
+        <p>Farben, Ton, Typografie und Bildwelt werden so ausgerichtet, dass ein wiedererkennbarer und unverwechselbarer Eindruck deiner Marke entsteht.</p>
       </article>
 
       <article class="process-card" id="service-step-04">
@@ -128,7 +128,7 @@ classes:
       <article class="process-card" id="service-step-06">
         <p class="process-card__number">06</p>
         <h3>Launch &amp; Pflege</h3>
-        <p>Nach dem Livegang wird weiter verfeinert, damit der Auftritt stabil bleibt und sich mit deinem Unternehmen sauber mitentwickelt.</p>
+        <p>Nach dem Livegang wird weiter verfeinert und analysiert, damit der Auftritt stabil bleibt, nicht mit den Jahren einstaubt und sich mit deinem Unternehmen mitentwickelt.</p>
       </article>
     </div>
   </div>

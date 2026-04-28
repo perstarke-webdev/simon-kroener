@@ -874,9 +874,9 @@
           return;
         }
 
-        baseStep = Math.max(168, Math.round(viewportHeight * 0.26));
-        firstStep = Math.max(56, Math.round(viewportHeight * 0.1));
-        lastStep = Math.max(baseStep + 120, Math.round(viewportHeight * 0.58));
+        baseStep = Math.max(330, Math.round(viewportHeight * 0.54));
+        firstStep = Math.max(96, Math.round(viewportHeight * 0.14));
+        lastStep = Math.max(baseStep + 160, Math.round(viewportHeight * 0.76));
 
         mobileScenes.style.setProperty(
           "--project-gallery-mobile-stage-height",
@@ -896,7 +896,7 @@
         );
         mobileScenes.style.setProperty(
           "--project-gallery-mobile-first-step-offset",
-          -firstStep + "px"
+          -Math.max(firstStep, Math.round(viewportHeight * 0.74)) + "px"
         );
         mobileScenes.style.setProperty(
           "--project-gallery-mobile-last-step-height",
