@@ -2626,20 +2626,20 @@ p {
     rgba(124, 58, 237, 0.92) 62%,
     rgba(255, 255, 255, 0)
   );
-  opacity: 0;
-  transform: scaleX(0.28) translateY(2px);
-  transform-origin: left center;
-  transition:
-    opacity 220ms cubic-bezier(0.22, 1, 0.36, 1),
-    transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  opacity: 1;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 180ms ease;
   pointer-events: none;
 }
 
 .site-brand__wordmark {
   color: var(--color-white);
-  font-size: clamp(1.15rem, 2vw, 1.45rem);
-  font-weight: 600;
-  letter-spacing: -0.03em;
+  font-family: var(--font-display);
+  font-size: clamp(1.34rem, 2.25vw, 1.68rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
   transition:
     color 180ms ease,
     text-shadow 220ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -2652,8 +2652,7 @@ p {
 
 .site-brand:hover::after,
 .site-brand:focus-visible::after {
-  opacity: 1;
-  transform: scaleX(1) translateY(0);
+  transform: scaleX(1);
 }
 
 .site-brand:hover .site-brand__wordmark,
@@ -3395,7 +3394,7 @@ p {
   --hero-copy-shift: -30px;
   --hero-portrait-shift: -14px;
   --hero-portrait-scale-delta: 0.16;
-  --hero-portrait-top-safe: clamp(112px, 12.5vh, 150px);
+  --hero-portrait-top-safe: clamp(96px, 11vh, 132px);
   min-height: 100vh;
   min-height: 100svh;
   padding: clamp(110px, 9vw, 138px) 0 0;
@@ -3471,11 +3470,11 @@ p {
 
 .simon-hero__visual {
   position: absolute;
-  right: clamp(-96px, -5.8vw, -60px);
+  right: clamp(-118px, -6.4vw, -72px);
   bottom: 0;
   width: auto;
-  height: min(clamp(640px, 61.8vw, 890px), calc(100vh - var(--hero-portrait-top-safe)));
-  height: min(clamp(640px, 61.8vw, 890px), calc(100svh - var(--hero-portrait-top-safe)));
+  height: min(clamp(670px, 66vw, 940px), calc(100vh - var(--hero-portrait-top-safe)));
+  height: min(clamp(670px, 66vw, 940px), calc(100svh - var(--hero-portrait-top-safe)));
   aspect-ratio: 1694 / 2109;
   min-height: 0;
   opacity: calc(1 - (var(--hero-portrait-progress) * 0.66));
@@ -3526,9 +3525,16 @@ p {
   transform: translateZ(0);
 }
 
-.simon-hero__portrait img {
+.simon-hero__portrait picture {
   position: relative;
   z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.simon-hero__portrait img {
+  position: relative;
   width: 100%;
   height: 100%;
   max-width: none;
@@ -3538,6 +3544,20 @@ p {
   transform: scaleX(-1);
   transform-origin: center bottom;
   backface-visibility: hidden;
+}
+
+@media (min-width: 861px) and (max-width: 1240px) {
+  .simon-hero__visual {
+    right: clamp(-170px, -11vw, -104px);
+    height: min(clamp(760px, 69vw, 820px), calc(100vh - var(--hero-portrait-top-safe)));
+    height: min(clamp(760px, 69vw, 820px), calc(100svh - var(--hero-portrait-top-safe)));
+  }
+}
+
+@media (min-width: 861px) and (max-width: 1120px) {
+  .simon-hero__visual {
+    right: clamp(-178px, -14vw, -132px);
+  }
 }
 
 .signature-band__intro {
@@ -3561,14 +3581,14 @@ p {
 
 .signature-band__intro .section-lead {
   grid-column: 2;
-  grid-row: 1 / span 2;
+  grid-row: 2;
   max-width: 46ch;
   justify-self: start;
 }
 
 .signature-band__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) repeat(2, minmax(0, 0.95fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(18px, 2vw, 28px);
   align-items: start;
 }
@@ -3584,7 +3604,7 @@ p {
   grid-template-columns: auto minmax(0, 1fr);
   column-gap: clamp(16px, 1.8vw, 24px);
   row-gap: var(--space-2xs);
-  min-height: 0;
+  min-height: clamp(238px, 18vw, 268px);
   height: auto;
   padding: clamp(24px, 2.8vw, 34px);
   border: 1px solid var(--signature-card-border);
@@ -3602,7 +3622,8 @@ p {
 
 .signature-band__card:nth-child(2) {
   --signature-card-bg:
-    linear-gradient(145deg, rgba(244, 238, 255, 0.98), rgba(219, 204, 255, 0.92));
+    radial-gradient(circle at 88% 8%, rgba(124, 58, 237, 0.1), transparent 34%),
+    linear-gradient(145deg, rgba(232, 222, 255, 0.98), rgba(197, 176, 255, 0.95));
   --signature-card-border: rgba(124, 58, 237, 0.16);
   --signature-card-shadow: 0 22px 60px rgba(58, 21, 105, 0.08);
   margin-top: var(--space-md);
@@ -3610,8 +3631,8 @@ p {
 
 .signature-band__card:nth-child(3) {
   --signature-card-bg:
-    radial-gradient(circle at 88% 8%, rgba(124, 58, 237, 0.26), transparent 34%),
-    linear-gradient(145deg, rgba(66, 31, 104, 0.98), rgba(47, 18, 76, 0.96));
+    radial-gradient(circle at 88% 8%, rgba(164, 128, 255, 0.26), transparent 34%),
+    linear-gradient(145deg, rgba(90, 52, 132, 0.98), rgba(72, 38, 108, 0.96));
   --signature-card-border: rgba(214, 199, 255, 0.18);
   --signature-card-ink: rgba(255, 255, 255, 0.82);
   --signature-card-title: rgba(255, 255, 255, 0.94);
@@ -4180,11 +4201,11 @@ p {
     position: relative;
     right: auto;
     bottom: auto;
-    width: min(94vw, 430px);
+    width: min(99vw, 450px);
     height: auto;
     aspect-ratio: 1694 / 2109;
     min-height: 0;
-    margin-top: clamp(8px, 3vw, 20px);
+    margin-top: clamp(0px, 1.5vw, 10px);
     margin-inline: auto;
     transform: translate3d(
         0,
@@ -4263,7 +4284,7 @@ p {
   }
 
   .simon-hero__visual {
-    width: min(96vw, 420px);
+    width: min(100vw, 440px);
   }
 
   .simon-hero__portrait {

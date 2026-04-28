@@ -402,9 +402,21 @@
       var scrollDepth = Math.max(0, scrollTop - heroTop);
       var progress = fadeDistance > 0 ? clamp(scrollDepth / fadeDistance, 0, 1) : 0;
       var copyProgress = clamp(progress * (isMobile ? 1.28 : 1.18), 0, 1);
-      var portraitProgress = clamp(progress * (isMobile ? 1.12 : 1.08), 0, 1);
+      var portraitProgress;
       var withinHeroWindow =
         scrollTop <= heroTop + fadeDistance + window.innerHeight * 0.24;
+
+      if (isMobile) {
+        var portraitStart = 0.24;
+        var portraitEnd = 1 / 1.12;
+        portraitProgress = clamp(
+          (progress - portraitStart) / (portraitEnd - portraitStart),
+          0,
+          1
+        );
+      } else {
+        portraitProgress = clamp(progress * 1.08, 0, 1);
+      }
 
       if (Math.abs(progress - lastProgress) > 0.001) {
         hero.style.setProperty("--hero-fade-progress", progress.toFixed(4));
