@@ -4850,7 +4850,7 @@ p {
 .bio-section__media--simon img {
   aspect-ratio: 0.88;
   object-position: 58% top;
-  transform: translateX(10%) scale(2.7);
+  transform: translateX(14.5%) scale(2.97);
   transform-origin: center 44%;
 }
 
@@ -5101,7 +5101,7 @@ p {
   .bio-section__media--simon img {
     aspect-ratio: 0.94;
     object-position: 58% top;
-    transform: translateX(8.5%) scale(2.46);
+    transform: translateX(12.5%) scale(2.71);
     transform-origin: center 42%;
   }
 
