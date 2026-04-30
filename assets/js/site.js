@@ -525,9 +525,9 @@
         header.classList.add("is-nav-open");
       }
       toggle.setAttribute("aria-expanded", "true");
-      toggle.setAttribute("aria-label", "Navigation schließen");
+      toggle.setAttribute("aria-label", "Navigation schliessen");
       if (toggleLabel) {
-        toggleLabel.textContent = "Navigation schließen";
+        toggleLabel.textContent = "Navigation schliessen";
       }
     });
 

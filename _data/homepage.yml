@@ -24,7 +24,7 @@ portfolio:
 final_cta:
   label: "Projekt starten"
   title: "Bereit für Klarheit, Charakter und Substanz?"
-  text: "Ich entwickle Websites und Markenauftritte, die ihren eigenen Charakter haben, optimal funktionieren und deinen Anspruch an Qualität nach außen tragen."
+  text: "Ich entwickle Websites und Markenauftritte, die ihren eigenen Charakter haben, optimal funktionieren und deinen Anspruch an Qualität nach aussen tragen."
   primary_cta:
     label: "Projekt anfragen"
     url: "/kontakt/"

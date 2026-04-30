@@ -48,7 +48,7 @@ classes:
 
       <div class="bio-section__body">
         <p>Ich arbeite an der Schnittstelle von Gestaltung, Markenbild und digitaler Präsenz. Genau dort entscheidet sich oft, ob ein Unternehmen online stark wirkt oder austauschbar bleibt.</p>
-        <p>Mich interessiert keine Oberfläche um ihrer selbst willen. Mich interessiert Präzision: klare Typografie, ein stimmiger Ton, nachvollziehbare Dramaturgie und eine Website, die in jeder Größe sauber funktioniert.</p>
+        <p>Mich interessiert keine Oberfläche um ihrer selbst willen. Mich interessiert Präzision: klare Typografie, ein stimmiger Ton, nachvollziehbare Dramaturgie und eine Website, die in jeder Grösse sauber funktioniert.</p>
         <p>Diese Haltung zieht sich durch jedes Projekt, unabhängig davon, ob es um einen kleinen Relaunch, ein Branding oder einen komplett neuen Auftritt geht.</p>
         <p class="bio-section__note">Je nach Projekt erfolgt die Umsetzung zusätzlich über unsere Agentur <a href="https://kroener-starke.ch/" target="_blank" rel="noopener noreferrer">Kröner &amp; Starke Web Development</a> gemeinsam mit meinem Geschäftspartner Per Starke, der fundierte technische Expertise für jedes Projekt mitbringt.</p>
       </div>
